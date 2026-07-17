@@ -1,0 +1,28 @@
+aid: procuros
+name: Procuros
+description: 'Procuros is a company surfaced as a portfolio company of creandum, point-nine and added
+  to the API Evangelist network as a stub for enrichment. Sector: saas. This profile is a lead awaiting
+  the enrichment pipeline.'
+url: https://raw.githubusercontent.com/api-evangelist/procuros/refs/heads/main/apis.yml
+x-type: company
+x-source: vc-portfolio
+x-backed-by:
+- creandum
+- point-nine
+x-tier: stub
+x-tier-reason: portfolio-lead
+specificationVersion: '0.20'
+created: '2026-07-17'
+modified: '2026-07-17'
+tags:
+- Company
+- Saas
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+common:
+- type: Website
+  url: https://procuros.io/
