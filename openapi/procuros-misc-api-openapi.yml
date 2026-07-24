@@ -1,0 +1,49 @@
+openapi: 3.0.3
+info:
+  title: Procuros All Transactions Misc API
+  description: Manage Procuros Transactions.
+  version: 2.0.0
+servers:
+- url: https://api.procuros.io/
+- url: https://api.procuros-staging.io/
+security:
+- api_token: []
+tags:
+- name: Misc
+paths:
+  /v2/ping:
+    get:
+      operationId: v2_ping
+      summary: Test connection to API
+      description: Send an authorized request to the API to test the connectivity.
+      tags:
+      - Misc
+      responses:
+        '204':
+          description: Success
+        4XX:
+          description: Client Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalErrorResponse'
+        5XX:
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalErrorResponse'
+components:
+  schemas:
+    InternalErrorResponse:
+      type: object
+      required:
+      - message
+      properties:
+        message:
+          type: string
+  securitySchemes:
+    api_token:
+      type: http
+      scheme: bearer
+      description: The API Token of your ERP Connection.
