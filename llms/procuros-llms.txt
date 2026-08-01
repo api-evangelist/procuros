@@ -1,0 +1,128 @@
+# Procuros
+
+## Docs
+
+- [List All Transactions](https://docs.procuros.io/en/api/v2/all-transactions/list-all-transactions.md): List all existing transactions to and from your trade partners.
+- [Show Transaction](https://docs.procuros.io/en/api/v2/all-transactions/show-transaction.md): Show a single transaction.
+- [Basics](https://docs.procuros.io/en/api/v2/api-concepts.md)
+- [Changelog](https://docs.procuros.io/en/api/v2/changelog.md): Recent changes to the Procuros API v2
+- [Authentication](https://docs.procuros.io/en/api/v2/concept-authentication.md)
+- [Error Handling](https://docs.procuros.io/en/api/v2/concept-error-handling.md)
+- [Pagination](https://docs.procuros.io/en/api/v2/concept-pagination.md)
+- [Batches & Best Before Dates](https://docs.procuros.io/en/api/v2/features-batches-best-before-dates.md)
+- [Bottle Deposits](https://docs.procuros.io/en/api/v2/features-bottle-deposits.md)
+- [Document Versioning](https://docs.procuros.io/en/api/v2/features-document-versioning.md)
+- [Enabled Trade Partners](https://docs.procuros.io/en/api/v2/features-enabled-trade-partners.md)
+- [Invoice Modifications](https://docs.procuros.io/en/api/v2/features-invoice-modifications.md)
+- [Package Identification](https://docs.procuros.io/en/api/v2/features-package-identification.md)
+- [Product Identification](https://docs.procuros.io/en/api/v2/features-product-identification.md)
+- [Taxes (VAT)](https://docs.procuros.io/en/api/v2/features-taxes-vat.md)
+- [Tracking Document Status](https://docs.procuros.io/en/api/v2/features-tracking-document-status.md)
+- [Trade Partner + Party Identification](https://docs.procuros.io/en/api/v2/features-trade-partner-party-identification.md)
+- [Bulk Mark Transactions Processed](https://docs.procuros.io/en/api/v2/incoming-transactions/bulk-mark-transactions-processed.md): Mark a list of incoming transactions as processed.
+- [List Incoming Transactions](https://docs.procuros.io/en/api/v2/incoming-transactions/list-incoming-transactions.md): List unprocessed incoming transactions from your trade partners.
+- [Mark Transaction Processed](https://docs.procuros.io/en/api/v2/incoming-transactions/mark-transaction-processed.md): Report processing of incoming transactions.
+- [Test connection to API](https://docs.procuros.io/en/api/v2/misc/test-connection-to-api.md): Send an authorized request to the API to test the connectivity.
+- [Report Outgoing Error](https://docs.procuros.io/en/api/v2/outgoing-transactions/report-outgoing-error.md): If you encounter an error while building an outgoing transaction payload, you can report it here. The error will enter the same exception handling process as an error reported while processing incoming transactions.
+- [Send Transaction](https://docs.procuros.io/en/api/v2/outgoing-transactions/send-transaction.md): Create and send a new transaction to one of your trade partners.
+- [Overview](https://docs.procuros.io/en/api/v2/overview.md)
+- [Quick Start](https://docs.procuros.io/en/api/v2/quick-start.md)
+- [Credit Notes](https://docs.procuros.io/en/api/v2/receiving-credit-notes.md)
+- [Dispatch Instruction Responses](https://docs.procuros.io/en/api/v2/receiving-dispatch-instruction-responses.md)
+- [Dispatch Instructions](https://docs.procuros.io/en/api/v2/receiving-dispatch-instructions.md)
+- [Invoices](https://docs.procuros.io/en/api/v2/receiving-invoices.md)
+- [Order Responses](https://docs.procuros.io/en/api/v2/receiving-order-responses.md)
+- [Orders](https://docs.procuros.io/en/api/v2/receiving-orders.md)
+- [Product Catalogs](https://docs.procuros.io/en/api/v2/receiving-product-catalogs.md)
+- [Sales Reports](https://docs.procuros.io/en/api/v2/receiving-sales-report.md)
+- [Shipping Notices](https://docs.procuros.io/en/api/v2/receiving-shipping-notices.md)
+- [Credit Notes](https://docs.procuros.io/en/api/v2/sending-credit-notes.md)
+- [Dispatch Instruction Responses](https://docs.procuros.io/en/api/v2/sending-dispatch-instruction-responses.md)
+- [Dispatch Instructions](https://docs.procuros.io/en/api/v2/sending-dispatch-instructions.md)
+- [Inventory Reports](https://docs.procuros.io/en/api/v2/sending-inventory-reports.md)
+- [Invoices](https://docs.procuros.io/en/api/v2/sending-invoices.md)
+- [Order Responses](https://docs.procuros.io/en/api/v2/sending-order-responses.md)
+- [Orders](https://docs.procuros.io/en/api/v2/sending-orders.md)
+- [Product Catalogs](https://docs.procuros.io/en/api/v2/sending-product-catalogs.md)
+- [Receival Notices](https://docs.procuros.io/en/api/v2/sending-receival-notices.md)
+- [Sales Reports](https://docs.procuros.io/en/api/v2/sending-sales-report.md)
+- [Shipping Notices](https://docs.procuros.io/en/api/v2/sending-shipping-notices.md)
+- [Test Data: Address Identifiers](https://docs.procuros.io/en/api/v2/test-cases-address-identifiers.md)
+- [Test Data: Items](https://docs.procuros.io/en/api/v2/test-cases-items.md)
+- [Best Practices](https://docs.procuros.io/en/api/v2/test-cases-overview.md)
+- [Procuros AS2 Details](https://docs.procuros.io/en/connectors/as2/as2.md): Technical information for connecting to Procuros via AS2
+- [Troubleshooting Common Errors](https://docs.procuros.io/en/connectors/ms-business-central/common-errors.md): Overview of common errors and how to fix them in MS Business Central
+- [Overview MS Business Central Connector](https://docs.procuros.io/en/connectors/ms-business-central/getting-started/overview.md): Overview of the capabilities and benefits of the Procuros MS Business Central Connector
+- [Technical Setup](https://docs.procuros.io/en/connectors/ms-business-central/getting-started/technical-setup.md): Learn how to set up Microsoft Business Central integration with Procuros
+- [How to setup Article Master Data in Business Central](https://docs.procuros.io/en/connectors/ms-business-central/master-data-configuration/article-master-data.md): Step by step guide to configure your article master data
+- [How to setup Customer Master Data in Business Central](https://docs.procuros.io/en/connectors/ms-business-central/master-data-configuration/customer-master-data.md): Step by step guide to configure your customer master data
+- [Confirm/Reject Orders](https://docs.procuros.io/en/connectors/ms-business-central/receiving-documents/confirm-reject-orders.md): Learn how to confirm, modify, or reject orders received from your trading partners
+- [Receiving Orders from Trading Partners](https://docs.procuros.io/en/connectors/ms-business-central/receiving-documents/receiving-orders.md): Learn how to receive and process orders from your trading partners in Business Central
+- [Send Delivery Notes](https://docs.procuros.io/en/connectors/ms-business-central/sending-documents/delivery-notes.md): Learn how to send delivery notes to your trading partners through Business Central
+- [Send Invoices](https://docs.procuros.io/en/connectors/ms-business-central/sending-documents/invoices.md): Learn how to send invoices to your trading partners through Business Central
+- [Procuros SFTP Details](https://docs.procuros.io/en/connectors/sftp/sftp.md): Technical information for connecting to Procuros via SFTP
+- [How to set up Article Hierarchies](https://docs.procuros.io/en/connectors/weclapp/features/article-hierarchies.md): Step by step guide to setting up article hierarchies in Weclapp
+- [How to set up Batches](https://docs.procuros.io/en/connectors/weclapp/features/charges.md): Step by step guide to setting up batches in Weclapp
+- [How to set up Deposits](https://docs.procuros.io/en/connectors/weclapp/features/deposits.md): Step by step guide to setting up deposits in Weclapp
+- [How to set up Discounts](https://docs.procuros.io/en/connectors/weclapp/features/discounts.md): Step by step guide to setting up discounts in Weclapp
+- [How to set up Fulfillment](https://docs.procuros.io/en/connectors/weclapp/features/fulfilment.md): Step by step guide to setting up fulfillment in Weclapp
+- [Overview Weclapp Connector](https://docs.procuros.io/en/connectors/weclapp/getting-started/overview.md): Overview of the capabilities and benefits of the Procuros Weclapp Connector
+- [How to connect your Weclapp instance to Procuros](https://docs.procuros.io/en/connectors/weclapp/getting-started/technical-setup.md): Step by step guide to setup your technical connection between your Weclapp and Procuros
+- [How to setup Article Master Data in Weclapp](https://docs.procuros.io/en/connectors/weclapp/master-data-configuration/article-master-data.md): Step by step guide to configure your article master data
+- [How to setup Customer Master Data in Weclapp](https://docs.procuros.io/en/connectors/weclapp/master-data-configuration/customer-master-data.md): Step by step guide to configure your customer master data
+- [Sending Credit Notes](https://docs.procuros.io/en/connectors/weclapp/sending-documents/credit-notes.md): Step by step guide to sending credit notes from Weclapp to Procuros
+- [Sending Dispatch Instructions](https://docs.procuros.io/en/connectors/weclapp/sending-documents/dispatch-instructions.md): Step by step guide to sending dispatch instructions from Weclapp to Procuros
+- [Sending Invoices](https://docs.procuros.io/en/connectors/weclapp/sending-documents/invoices.md): Step by step guide to sending invoices from Weclapp to Procuros
+- [Sending Shipping Notes](https://docs.procuros.io/en/connectors/weclapp/sending-documents/shipping-notices.md): Step by step guide to sending shipping notices from Weclapp to Procuros
+- [Procuros x400 Details](https://docs.procuros.io/en/connectors/x400/x400.md): Technical information for connecting to Procuros via x400
+- [How to set up Article Hierarchies](https://docs.procuros.io/en/connectors/xentral/features/article-hierarchies.md): Step by step guide to setting up article hierarchies in Xentral
+- [How to set up Batches](https://docs.procuros.io/en/connectors/xentral/features/charges.md): Step by step guide to setting up batches in Xentral
+- [How to set up Deposits](https://docs.procuros.io/en/connectors/xentral/features/deposits.md): Step by step guide to setting up deposits in Xentral
+- [How to set up Discounts](https://docs.procuros.io/en/connectors/xentral/features/discounts.md): Step by step guide to setting up discounts in Xentral
+- [How to set up Fulfillment](https://docs.procuros.io/en/connectors/xentral/features/fulfilment.md): Step by step guide to setting up fulfillment in Xentral
+- [Overview Xentral Connector](https://docs.procuros.io/en/connectors/xentral/getting-started/overview.md): Overview of the capabilities and benefits of the Procuros Xentral Connector
+- [How to connect your Xentral instance to Procuros](https://docs.procuros.io/en/connectors/xentral/getting-started/technical-setup.md): Step by step guide to setup your technical connection between your Xentral and Procuros
+- [How to setup Article Master Data in Xental](https://docs.procuros.io/en/connectors/xentral/master-data-configuration/article-master-data.md): Step by step guide to configure your article master data
+- [How to setup Customer Master Data in Xental](https://docs.procuros.io/en/connectors/xentral/master-data-configuration/customer-master-data.md): Step by step guide to configure your customer master data
+- [Receiving Inventory Reports](https://docs.procuros.io/en/connectors/xentral/receiving-documents/inventory-reports.md): Step by step guide to receiving inventory reports in Xentral from Procuros.
+- [Sending Credit Notes](https://docs.procuros.io/en/connectors/xentral/sending-documents/credit-notes.md): Step by step guide to sending credit notes from Xentral to Procuros
+- [Sending Dispatch Instructions](https://docs.procuros.io/en/connectors/xentral/sending-documents/dispatch-instructions.md): Step by step guide to sending dispatch instructions from Xentral to Procuros
+- [Sending Invoices](https://docs.procuros.io/en/connectors/xentral/sending-documents/invoices.md): Step by step guide to sending invoices from Xentral to Procuros
+- [Sending Shipping Notes](https://docs.procuros.io/en/connectors/xentral/sending-documents/shipping-notices.md): Step by step guide to sending shipping notices from Xentral to Procuros
+- [Manage Company Data](https://docs.procuros.io/en/general/admin/company-data.md): Learn how to maintain and update your company details and business identifiers in the Procuros Portal.
+- [Invite Team Members](https://docs.procuros.io/en/general/admin/invite-new-team-members.md): Learn how to add and manage team members in Procuros.
+- [Notifications Management](https://docs.procuros.io/en/general/admin/notifications-management.md): Learn how to manage document-level and relationship-level responsible users for notifications in the Procuros Portal.
+- [Change Password](https://docs.procuros.io/en/general/admin/password.md): Learn how to securely change your password in the Procuros Portal
+- [Manage Profile & Preferences](https://docs.procuros.io/en/general/admin/profile-preferences.md): Learn how to customize your personal settings in the Procuros Portal, including language, name, and notification preferences.
+- [AI Agents](https://docs.procuros.io/en/general/portal/ai-agents.md): Here's a look at how Procuros's AI Agents work, what they do, and where they fit into your document flow.
+- [My Connections](https://docs.procuros.io/en/general/portal/connections.md): An overview of your trading partner connections in Procuros – check status, activate new connections, and manage existing ones.
+- [Document Understanding Agent](https://docs.procuros.io/en/general/portal/document-understanding-agent.md)
+- [Getting Started](https://docs.procuros.io/en/general/portal/getting-started.md): Learn about the core functions of Procuros. This guide walks you through the key areas of the platform and explains how to get started.
+- [Multi-Partner Workspace](https://docs.procuros.io/en/general/portal/multi-partner-workspace.md): Use one Procuros account to access multiple companies and switch between them from the portal.
+- [Procuros Network](https://docs.procuros.io/en/general/portal/network.md): Learn how to expand your trading network and connect business partners through the Procuros Network.
+- [Order Agent](https://docs.procuros.io/en/general/portal/order-agent.md)
+- [Order Forms](https://docs.procuros.io/en/general/portal/orderform.md): Learn how to place an order via a Procuros order form to one of your suppliers
+- [Payment Reconciliation](https://docs.procuros.io/en/general/portal/payment-reconciliation.md): Learn how to identify and resolve payment data by comparing your exchanged documents with remittance advices.
+- [Create Price Catalogs](https://docs.procuros.io/en/general/portal/pricat.md): Learn how to create and manage price catalogs for your trading partners. Price catalogs allow you to maintain and share current product information and pricing with your trading partners⁠⁠.
+- [Setup tasks](https://docs.procuros.io/en/general/portal/tasks.md): Learn how to complete tasks required by your trading partners to proceed with a connection.
+- [Import a CSV into Excel](https://docs.procuros.io/en/general/portal/transactions/import-csv-into-excel.md): A quick 4-step guide to importing Procuros CSV exports cleanly into Microsoft Excel using the Text Import Wizard.
+- [Orders](https://docs.procuros.io/en/general/portal/transactions/receiving-orders.md): Learn how to efficiently process open orders in the Procuros Portal. This guide shows you how to access orders and process them, including creating subsequent documents.
+- [Reprocessing & Resending](https://docs.procuros.io/en/general/portal/transactions/reprocessing-transactions.md): Learn how to send a document to your trading partner again in Procuros, how reprocessing behaves depending on your connection, and how to edit a document before sending it again.
+- [Credit Notes](https://docs.procuros.io/en/general/portal/transactions/sending-credit-notes.md): Learn how to create and manage credit notes for existing invoices in Procuros WebEDI.
+- [Invoices](https://docs.procuros.io/en/general/portal/transactions/sending-invoices.md): Learn how to create, edit, and send invoices to your trading partners in Procuros WebEDI.
+- [Order Responses](https://docs.procuros.io/en/general/portal/transactions/sending-order-responses.md): Learn how to confirm, reject, or partially confirm incoming orders from your trading partners  in Procuros.
+- [Shipping Notices](https://docs.procuros.io/en/general/portal/transactions/sending-shipping-notices.md): Learn how to easily create, edit, and send Shipping Notices to your trading partners via Procuros.
+- [Setting Up Email Forwarding in Microsoft Outlook](https://docs.procuros.io/en/general/portal/transactions/setting-up-email-forwarding.md): Learn how to automatically forward emails in Microsoft Outlook to Procuros to seamlessly process supplier documents and save time.
+- [Transaction Overview](https://docs.procuros.io/en/general/portal/transactions/transactions-intro.md): Learn how to efficiently manage and monitor your business transactions in Procuros. This guide explains the different views and features of the transaction overview.
+- [Uploading PDF Documents](https://docs.procuros.io/en/general/portal/transactions/upload-existing.md): Guide for automated uploading and processing of PDF documents such as delivery notes and invoices in the Procuros WebEDI portal.
+- [Blocked Transactions](https://docs.procuros.io/en/general/troubleshooting/blocked-transactions.md): Learn how to identify and effectively resolve blocked transactions in the Procuros network. This guide explains the most common causes and outlines the necessary steps for resolution.
+- [Platform Concepts](https://docs.procuros.io/en/general/welcome/concepts.md): Fundamental concepts and functionality of the Procuros B2B platform for digital document exchange between trading partners
+- [Welcome to Procuros](https://docs.procuros.io/en/general/welcome/introduction.md): Getting Started and Overview of the Procuros Platform for Digital Commerce
+- [Procuros Supplier Onboarding](https://docs.procuros.io/en/general/welcome/procuros-supplier-onboarding.md)
+
+## OpenAPI Specs
+
+- [openapi-v2](https://docs.procuros.io/en/api/v2/openapi-v2.yaml)
+- [Procuros-OpenAPI](https://docs.procuros.io/Procuros-OpenAPI.json)
+- [package-lock](https://docs.procuros.io/package-lock.json)
+- [.prettierrc](https://docs.procuros.io/.prettierrc.json)

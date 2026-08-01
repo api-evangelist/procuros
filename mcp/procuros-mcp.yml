@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: openapi/procuros-openapi-original.yml
+description: >-
+  No official hosted/remote Procuros MCP server was found (docs, npm @modelcontextprotocol, MCP
+  registries as of 2026-07-20). This is a candidate tool list derived one-to-one from the API v2
+  OpenAPI operations, for building an MCP wrapper.
+server:
+  name: procuros
+  transport: http
+  url: null
+auth:
+  type: http-bearer
+  note: Pass the Procuros API token as a Bearer token per request.
+tools:
+  - name: list_incoming_transactions
+    description: List unprocessed incoming transactions from your trade partners.
+    source_operation: openapi/procuros-openapi-original.yml#v2_list_received_transactions
+  - name: send_transaction
+    description: Create and send a new transaction to one of your trade partners.
+    source_operation: openapi/procuros-openapi-original.yml#v2_send_transaction
+  - name: mark_transaction_processed
+    description: Report processing of an incoming transaction.
+    source_operation: openapi/procuros-openapi-original.yml#v2_mark_transaction_processed
+  - name: bulk_mark_transactions_processed
+    description: Mark a list of incoming transactions as processed.
+    source_operation: openapi/procuros-openapi-original.yml#v2_bulk_mark_transactions_processed
+  - name: list_all_transactions
+    description: List all existing transactions to and from your trade partners.
+    source_operation: openapi/procuros-openapi-original.yml#v2_list_all_transactions
+  - name: show_transaction
+    description: Show a single transaction by its Procuros transaction id.
+    source_operation: openapi/procuros-openapi-original.yml#v2_show_transaction
+  - name: report_outgoing_error
+    description: Report an error encountered while building an outgoing transaction payload.
+    source_operation: openapi/procuros-openapi-original.yml#v2_report_error
+  - name: ping
+    description: Send an authorized request to test API connectivity.
+    source_operation: openapi/procuros-openapi-original.yml#v2_ping

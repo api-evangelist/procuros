@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.procuros.io/en/api/v2/changelog
+scheme: dated
+versioning: semver
+current: v2
+window: recent
+entries:
+  - date: '2026-04-06'
+    label: Automatic cleanup of outdated document versions
+    breaking: false
+    highlights: >-
+      When a new version of a document is detected, older pending versions are automatically
+      removed from the queue, so GET /v2/transactions only returns the latest version. isLatestVersion
+      remains available for completeness.
+  - date: '2026-03-21'
+    label: Document versioning fields
+    breaking: false
+    highlights: >-
+      New fields on Transaction and ReceivedTransaction: replacesProcurosTransactionId,
+      replacedByProcurosTransactionId, isLatestVersion — to detect superseded documents and trace
+      version chains. New Document Versioning guide.
+  - date: '2026-03-13'
+    label: Order identifier on shipping notice line items
+    breaking: false
+    highlights: New orderIdentifier field on shipping notice line items to trace each line to its order.
+  - date: '2026-03-03'
+    label: Technical sender party
+    breaking: false
+    highlights: >-
+      New technicalSender party added to all document types, identifying the system/party that
+      technically transmitted a document (may differ from commercial sender).
+  - date: '2026-02-25'
+    label: Relaxed ship-to identifier requirements
+    breaking: false
+    highlights: Identifier fields on the shipTo party are no longer required.
+  - date: '2026-02-02'
+    label: Receival notice
+    breaking: false
+    highlights: Receival notice document type additions.

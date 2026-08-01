@@ -1,0 +1,12 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/procuros-openapi-original.yml
+skills:
+  - file: procuros-send-transaction.md
+    name: Send a transaction to a trade partner
+    api: openapi/procuros-openapi-original.yml
+    operations: [v2_ping, v2_send_transaction, v2_show_transaction, v2_report_error]
+  - file: procuros-process-incoming.md
+    name: Process incoming transactions
+    api: openapi/procuros-openapi-original.yml
+    operations: [v2_list_received_transactions, v2_mark_transaction_processed, v2_bulk_mark_transactions_processed, v2_report_error]

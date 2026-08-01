@@ -1,0 +1,63 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.procuros.io/en/api/v2/api-concepts
+description: >-
+  Cross-cutting request/response semantics for the Procuros API v2, harvested from the docs
+  and the published OpenAPI. Procuros is a B2B EDI / digital-trade platform; the API exchanges
+  business documents (transactions) between trade partners.
+authentication:
+  style: http-bearer
+  header: 'Authorization: Bearer <api-token>'
+  docs: https://docs.procuros.io/en/api/v2/concept-authentication
+  see: authentication/procuros-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v2
+  semver: true
+  policy: >-
+    Follows semantic versioning; a new major version is introduced only for backwards-incompatible
+    changes. Purely additive changes (new JSON properties) are NOT breaking — clients must tolerate
+    unknown fields.
+  docs: https://docs.procuros.io/en/api/v2/api-concepts
+pagination:
+  style: cursor
+  request_params:
+    - name: cursor
+      in: query
+      description: Cursor pointing to the beginning of a page.
+    - name: per_page
+      in: query
+      description: Resources per page (1-100, default 25).
+  response_fields:
+    - items
+    - hasMore
+    - perPage
+    - count
+    - nextCursor
+    - nextPageUrl
+  docs: https://docs.procuros.io/en/api/v2/concept-pagination
+datetime:
+  format: ISO8601
+  timezone: Europe/Berlin
+  note: All datetime attributes are returned in Europe/Berlin regardless of stored timezone.
+idempotency:
+  supported: false
+  note: >-
+    No client-supplied idempotency-key header is documented. The API does dedupe outgoing sends
+    server-side — a duplicate payload returns HTTP 400 "Payload already received" — but there is
+    no Idempotency-Key contract, so this is not exposed as a canonical Idempotency pointer.
+error_envelope:
+  content_type: application/json
+  shape: '{ message: string, errors?: { field: string[] } }'
+  rfc9457: false
+  see: errors/procuros-problem-types.yml
+rate_limiting:
+  signal: HTTP 429 Too Many Requests
+  guidance: Use bulk endpoints where available; contact support to raise the limit.
+transport:
+  https_only: true
+  note: HTTP requests fail; HTTPS is required.
+environments:
+  staging: https://api.procuros-staging.io/v2
+  production: https://api.procuros.io/v2
+  see: sandbox/procuros-sandbox.yml

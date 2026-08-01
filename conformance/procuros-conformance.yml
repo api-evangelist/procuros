@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/procuros-openapi-original.yml
+description: >-
+  Cross-cutting standards conformance derived from the Procuros API v2 OpenAPI and docs. Procuros
+  is a B2B EDI / e-invoicing platform; industry conformance below reflects the document formats it
+  brokers, not API-security frameworks.
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: Auth is a static HTTP Bearer API token, not OAuth2.
+  - id: openid-connect
+    conforms: false
+  - id: http-bearer-auth
+    conforms: true
+    evidence: securitySchemes.api_token is type http, scheme bearer.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom { message, errors } JSON envelope, not application/problem+json.
+  - id: semver
+    conforms: true
+    evidence: Docs state the API follows semantic versioning; major bump only for breaking changes.
+  - id: cursor-pagination
+    conforms: true
+    evidence: List endpoints use cursor/per_page with hasMore/nextCursor/nextPageUrl.
+  - id: iso8601-datetime
+    conforms: true
+    evidence: Docs specify ISO8601 datetimes (Europe/Berlin timezone).
+  - id: openapi-3.0
+    conforms: true
+    evidence: Published OpenAPI 3.0.3 document at docs.procuros.io/en/api/v2/openapi-v2.yaml.
+  - id: peppol
+    conforms: true
+    evidence: >-
+      Procuros supports PEPPOL e-invoicing (per company site); document brokered via the platform,
+      not an API-surface claim.
+  - id: zugferd
+    conforms: true
+    evidence: Supports ZUGFeRD e-invoicing format (per company site).
+  - id: xrechnung
+    conforms: true
+    evidence: Supports X-Rechnung e-invoicing format (per company site).
+  - id: edifact-as2
+    conforms: true
+    evidence: Offers AS2, SFTP, X.400 EDI connectors (per docs connectors section).

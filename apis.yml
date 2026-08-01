@@ -1,28 +1,169 @@
 aid: procuros
 name: Procuros
-description: 'Procuros is a company surfaced as a portfolio company of creandum, point-nine and added
-  to the API Evangelist network as a stub for enrichment. Sector: saas. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Procuros is a Hamburg-based B2B digital trade platform that connects suppliers with retailers
+  and logistics partners through automated document exchange. A single connection lets trading
+  partners exchange orders, order responses, invoices, credit notes, shipping notices, dispatch
+  instructions, product catalogs and more — whether the partner runs EDI (AS2, SFTP, X.400),
+  PDFs, or Excel. Procuros offers ERP connectors (SAP, Microsoft Business Central, Oracle, Odoo,
+  Weclapp, Xentral, JTL), an AI-powered Order Agent for PDF/email orders, e-invoicing compliance
+  (ZUGFeRD, X-Rechnung, PEPPOL), logistics automation and payment reconciliation. Its REST API v2
+  lets integrators list incoming transactions, send outgoing transactions, mark documents
+  processed, and report errors — backed by an OpenAPI 3.0.3 spec, cursor pagination, Bearer-token
+  auth, and a staging environment. Backed by Creandum and Point Nine.
 url: https://raw.githubusercontent.com/api-evangelist/procuros/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - creandum
 - point-nine
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: has-public-api
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/procuros.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-- Saas
-apis: []
+- SaaS
+- EDI
+- E-Invoicing
+- Supply Chain
+- Procurement
+- B2B Integration
+- Logistics
+- ERP Integration
+apis:
+- aid: procuros:procuros-all-transactions-api
+  name: Procuros All Transactions API
+  description: The All Transactions API from Procuros — 2 operation(s) for all transactions.
+  humanURL: https://docs.procuros.io/en/api/v2/overview
+  baseURL: https://api.procuros.io/v2
+  tags:
+  - All Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/procuros-all-transactions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.procuros.io/en/api/v2/overview
+  - type: APIReference
+    url: https://docs.procuros.io/en/api/v2/overview
+  - type: GettingStarted
+    url: https://docs.procuros.io/en/api/v2/quick-start
+- aid: procuros:procuros-incoming-transactions-api
+  name: Procuros Incoming Transactions API
+  description: The Incoming Transactions API from Procuros — 3 operation(s) for incoming transactions.
+  humanURL: https://docs.procuros.io/en/api/v2/overview
+  baseURL: https://api.procuros.io/v2
+  tags:
+  - Incoming Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/procuros-incoming-transactions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.procuros.io/en/api/v2/overview
+  - type: APIReference
+    url: https://docs.procuros.io/en/api/v2/overview
+  - type: GettingStarted
+    url: https://docs.procuros.io/en/api/v2/quick-start
+- aid: procuros:procuros-misc-api
+  name: Procuros Misc API
+  description: The Misc API from Procuros — 1 operation(s) for misc.
+  humanURL: https://docs.procuros.io/en/api/v2/overview
+  baseURL: https://api.procuros.io/v2
+  tags:
+  - Misc
+  properties:
+  - type: OpenAPI
+    url: openapi/procuros-misc-api-openapi.yml
+  - type: Documentation
+    url: https://docs.procuros.io/en/api/v2/overview
+  - type: APIReference
+    url: https://docs.procuros.io/en/api/v2/overview
+  - type: GettingStarted
+    url: https://docs.procuros.io/en/api/v2/quick-start
+- aid: procuros:procuros-outgoing-transactions-api
+  name: Procuros Outgoing Transactions API
+  description: The Outgoing Transactions API from Procuros — 2 operation(s) for outgoing transactions.
+  humanURL: https://docs.procuros.io/en/api/v2/overview
+  baseURL: https://api.procuros.io/v2
+  tags:
+  - Outgoing Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/procuros-outgoing-transactions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.procuros.io/en/api/v2/overview
+  - type: APIReference
+    url: https://docs.procuros.io/en/api/v2/overview
+  - type: GettingStarted
+    url: https://docs.procuros.io/en/api/v2/quick-start
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DeveloperPortal
+  url: https://docs.procuros.io/en/api/v2/overview
+- type: Documentation
+  url: https://docs.procuros.io/
+- type: APIReference
+  url: https://docs.procuros.io/en/api/v2/overview
+- type: GettingStarted
+  url: https://docs.procuros.io/en/api/v2/quick-start
+- type: Login
+  url: https://portal.procuros.io/login
+- type: Blog
+  url: https://procuros.io/blog
+- type: GitHubOrganization
+  url: https://github.com/procuros
+- type: TermsOfService
+  url: https://procuros.io/saas-terms-and-conditions
+- type: PrivacyPolicy
+  url: https://procuros.io/data-processing
+- type: Authentication
+  url: authentication/procuros-authentication.yml
+- type: AgenticAccess
+  url: agentic-access/procuros-agentic-access.yml
+- type: DomainSecurity
+  url: security/procuros-domain-security.yml
+- type: ErrorCatalog
+  url: errors/procuros-problem-types.yml
+- type: Conventions
+  url: conventions/procuros-conventions.yml
+- type: Lifecycle
+  url: lifecycle/procuros-lifecycle.yml
+- type: ChangeLog
+  url: changelog/procuros-changelog.yml
+- type: Sandbox
+  url: sandbox/procuros-sandbox.yml
+- type: Conformance
+  url: conformance/procuros-conformance.yml
+- type: DataModel
+  url: data-model/procuros-data-model.yml
+- type: MCPServer
+  url: mcp/procuros-mcp.yml
+- type: LLMsTxt
+  url: llms/procuros-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
 - type: Website
   url: https://procuros.io/
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 16
+  pass: local-v1

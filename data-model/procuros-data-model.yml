@@ -1,0 +1,70 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/procuros-openapi-original.yml
+docs: https://docs.procuros.io/en/api/v2/overview
+description: >-
+  Entity-relationship model derived from the Procuros API v2 OpenAPI. The core resource is the
+  Transaction — a business document (order, invoice, shipping notice, etc.) exchanged between
+  trade partners. Received vs Sent are directional views of the same Transaction concept.
+identifiers:
+  procurosTransactionId:
+    format: uuid
+    entity: Transaction
+entities:
+  - name: Transaction
+    id_field: procurosTransactionId
+    key_fields: [type, status, flow, createdAt, isLatestVersion, content]
+    description: A business document to/from a trade partner, with a type, status, and flow.
+  - name: ReceivedTransaction
+    description: Directional view of an incoming Transaction from a trade partner.
+  - name: SentTransaction
+    description: >-
+      Directional view of an outgoing Transaction; polymorphic per document type
+      (SentOrderTransaction, SentInvoiceTransaction, SentShippingNoticeTransaction, ...).
+  - name: TransactionContent
+    description: The typed document payload (Order, Invoice, ShippingNotice, CreditNote, ...).
+  - name: Party
+    description: A trading party on a document (buyer, seller, shipTo, technicalSender).
+  - name: Order
+    description: Order document with OrderHeader and OrderItem line items.
+  - name: Invoice
+    description: Invoice document with InvoiceHeader and (nested) InvoiceItem line items.
+  - name: ShippingNotice
+    description: Shipping notice with transport units and line items.
+  - name: ProductCatalog
+    description: Product catalog document with catalog items and packaging units.
+enums:
+  TransactionType: [ORDER, ORDER_RESPONSE, SHIPPING_NOTICE, INVOICE, CREDIT_NOTE, DISPATCH_INSTRUCTION, DISPATCH_INSTRUCTION_RESPONSE, RECEIVAL_NOTICE, REMITTANCE_ADVICE, PRODUCT_CATALOG, INVENTORY_REPORT, SALES_REPORT]
+  TransactionFlow: [LIVE, TEST]
+  ErrorType: [DATA, INTERNAL]
+relationships:
+  - from: Transaction
+    to: TransactionContent
+    kind: has_one
+    via: content
+  - from: Transaction
+    to: Transaction
+    kind: has_one
+    via: replacesProcurosTransactionId
+    note: Points at the document version this one supersedes.
+  - from: Transaction
+    to: Transaction
+    kind: has_one
+    via: replacedByProcurosTransactionId
+    note: Points at the newer version that supersedes this one.
+  - from: Order
+    to: OrderItem
+    kind: has_many
+    via: items
+  - from: Invoice
+    to: InvoiceItem
+    kind: has_many
+    via: items
+  - from: ShippingNotice
+    to: ShippingNoticeItem
+    kind: has_many
+    via: items
+  - from: TransactionContent
+    to: Party
+    kind: has_many
+    via: [buyer, seller, shipTo, technicalSender]

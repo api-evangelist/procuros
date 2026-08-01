@@ -1,0 +1,28 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Procuros API v2
+  version: 1.0.0
+extends: openapi/procuros-openapi-original.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-enriched: '2026-07-20'
+      x-apievangelist-provider: procuros
+      x-apievangelist-docs: https://docs.procuros.io/en/api/v2/overview
+      x-apievangelist-auth: http-bearer (static API token per ERP Connection)
+      x-apievangelist-pagination: cursor (cursor/per_page; hasMore/nextCursor/nextPageUrl)
+      x-apievangelist-error-envelope: 'custom { message, errors } (not RFC 9457)'
+  - target: $.info
+    update:
+      x-apievangelist-categories:
+        - EDI
+        - E-Invoicing
+        - Supply Chain
+        - Procurement
+        - B2B Integration
+  - target: $.servers
+    update:
+      - url: https://api.procuros.io/
+        description: Production
+      - url: https://api.procuros-staging.io/
+        description: Staging (test environment)

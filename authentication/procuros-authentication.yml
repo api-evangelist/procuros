@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/procuros-openapi-original.yml
+docs: https://docs.procuros.io/en/api/v2/concept-authentication
+notes: >-
+  The Procuros API v2 authenticates every request with a static API token passed as an HTTP
+  Bearer token (`Authorization: Bearer <token>`). Tokens are issued per ERP Connection and
+  requested from Procuros support (no self-service key management or OAuth flow). All requests
+  must be over HTTPS; unauthenticated calls fail with 401. Separate tokens exist for the Staging
+  and Production environments. Test connectivity with `GET /v2/ping`.
+summary:
+  types:
+  - http
+schemes:
+- name: api_token
+  type: http
+  scheme: bearer
+  description: The API Token of your ERP Connection.
+  sources:
+  - openapi/procuros-openapi-original.yml

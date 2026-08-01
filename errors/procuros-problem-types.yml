@@ -1,0 +1,74 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/procuros-openapi-original.yml
+docs: https://docs.procuros.io/en/api/v2/concept-error-handling
+format: custom-json
+description: >-
+  Procuros API v2 does NOT use RFC 9457 problem+json. Failed requests return a JSON envelope
+  with a human-readable `message` string, and (only on 422 Validation Failed) an `errors` object
+  mapping each invalid field to its validation messages. Standard HTTP status codes signal
+  success (2xx) vs failure (4xx/5xx).
+envelope:
+  content_type: application/json
+  fields:
+    - name: message
+      type: string
+      description: Short, English error description (present on all 4xx responses).
+    - name: errors
+      type: object
+      description: >-
+        Only on 422. Map of field name to an array of validation error strings.
+  example_validation:
+    message: Invalid data provided.
+    errors:
+      type:
+        - The selected type is invalid.
+  example_client:
+    message: Payload already received
+problems:
+  - status: 400
+    title: Bad Request
+    meaning: There was an issue with the request sent, such as a duplicate payload.
+    remediation: Inspect `message`; a duplicate (idempotent) send returns "Payload already received".
+  - status: 401
+    title: Unauthorized
+    meaning: The API token is missing or invalid.
+    remediation: 'Provide a valid `Authorization: Bearer <token>` for the correct environment.'
+  - status: 403
+    title: Forbidden
+    meaning: The API token does not have permission to perform this action.
+  - status: 404
+    title: Not Found
+    meaning: The requested entity (e.g. Transaction) could not be found.
+    schema: InternalErrorResponse
+  - status: 422
+    title: Validation Failed
+    meaning: The request data is invalid; `errors` lists the fields that failed and why.
+    schema: GeneralValidationErrorResponse / TransactionValidationErrorResponse
+    remediation: Correct the fields listed under `errors`.
+  - status: 429
+    title: Too Many Requests
+    meaning: Rate limit exceeded.
+    remediation: Use bulk endpoints where available, or contact support to raise the limit.
+  - status: 500
+    title: Server Error
+    meaning: An error occurred on the Procuros side (rare). Also 502/503/504.
+    schema: InternalErrorResponse
+    remediation: Retry later; mark the document for later retry.
+error_report_endpoint:
+  operationId: v2_report_error
+  path: POST /v2/errors
+  description: >-
+    Consumers report their own outbound/processing errors back to Procuros so they enter the
+    same exception-handling process. Body carries `errorReason`, `errorType` (DATA | INTERNAL),
+    `errorContext`, `transactionIdentifier`, `transactionType`.
+  error_types:
+    - value: DATA
+      meaning: Invalid or insufficient data; resolvable by a user.
+    - value: INTERNAL
+      meaning: System-level error that cannot be fixed by a user.
+derived_from_operations:
+  - openapi/procuros-openapi-original.yml#v2_list_received_transactions
+  - openapi/procuros-openapi-original.yml#v2_send_transaction
+  - openapi/procuros-openapi-original.yml#v2_show_transaction
+  - openapi/procuros-openapi-original.yml#v2_report_error

@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.procuros.io/en/api/v2/api-concepts
+versioning:
+  scheme: uri-path
+  current: v2
+  semver: true
+  docs: https://docs.procuros.io/en/api/v2/api-concepts
+  policy: >-
+    New major version number only for backwards-incompatible changes. Additive changes (new JSON
+    fields) are non-breaking and clients must tolerate them. A version selector in the docs exposes
+    older versions.
+deprecation:
+  policy: >-
+    Backwards-incompatible changes ship as a new major version rather than in-place deprecation;
+    no RFC 8594 Sunset/Deprecation header contract is documented. Superseded documents are tracked
+    at the data level via replacesProcurosTransactionId / replacedByProcurosTransactionId /
+    isLatestVersion.
+  sunset_header: false
+changelog:
+  docs: https://docs.procuros.io/en/api/v2/changelog
+  see: changelog/procuros-changelog.yml
+status_page: null
+sla: null
+deprecated_operations: []
+notes: >-
+  No public status page (status.procuros.io does not resolve; procuros.statuspage.io redirects to
+  the Statuspage marketing site) and no published SLA/uptime target were found as of 2026-07-20.

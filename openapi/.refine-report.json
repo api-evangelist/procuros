@@ -1,0 +1,20 @@
+{
+  "provider": "procuros",
+  "sources": [
+    "procuros-all-transactions-api-openapi.yml",
+    "procuros-incoming-transactions-api-openapi.yml",
+    "procuros-misc-api-openapi.yml",
+    "procuros-outgoing-transactions-api-openapi.yml"
+  ],
+  "outputs": [
+    "procuros-all-transactions-api-openapi.yml",
+    "procuros-incoming-transactions-api-openapi.yml",
+    "procuros-misc-api-openapi.yml",
+    "procuros-outgoing-transactions-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

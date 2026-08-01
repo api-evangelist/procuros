@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.procuros.io/en/api/v2/api-concepts
+docs:
+  - https://docs.procuros.io/en/api/v2/api-concepts
+  - https://docs.procuros.io/en/api/v2/test-cases-overview
+  - https://docs.procuros.io/en/api/v2/test-cases-address-identifiers
+  - https://docs.procuros.io/en/api/v2/test-cases-items
+environments:
+  staging:
+    base_url: https://api.procuros-staging.io/v2
+    purpose: >-
+      Test interaction with the API without accidentally sending transactions to real Trade
+      Partners. Staging and Production are distinguished purely by domain and each require their
+      own API token.
+  production:
+    base_url: https://api.procuros.io/v2
+test_data:
+  description: >-
+    On request, Procuros generates static test data for a staging account. This data is not
+    connected to any real ERP data and is only used for testing. It includes partners that accept
+    different document types and a list of retail items.
+  provisioning: Generated per account by Procuros for staging use.
+  references:
+    - Test Data: Address Identifiers (https://docs.procuros.io/en/api/v2/test-cases-address-identifiers)
+    - Test Data: Items (https://docs.procuros.io/en/api/v2/test-cases-items)
+transaction_flow_flag:
+  field: flow
+  values: [LIVE, TEST]
+  note: >-
+    Transactions carry a `flow` attribute (LIVE or TEST) distinguishing test documents from live
+    ones within the platform.
+recommended_test_scenarios:
+  - Null values (missing dates, missing quantities)
+  - Decimal values (quantities, prices)
+  - Zero values
+  - Validation errors returned from the API
+  - Reporting an error back via POST /v2/errors
+  - Duplicate GLN (multiple customers found for a given GLN)
+  - Duplicate GTIN (multiple products found for a given GTIN)
+  - Missing data in the ERP system
+connectivity_check:
+  operationId: v2_ping
+  path: GET /v2/ping
+  note: Returns 204 on success; 401 if the token is wrong for the environment.
