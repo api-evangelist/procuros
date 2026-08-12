@@ -116,6 +116,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Overlay
+  url: overlays/procuros-v2-overlay.yaml
 - type: DeveloperPortal
   url: https://docs.procuros.io/en/api/v2/overview
 - type: Documentation
