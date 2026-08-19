@@ -1,0 +1,643 @@
+{
+  "item": [
+    {
+      "id": "d9d74b71-09ae-4c1b-b835-a6f386e8aa09",
+      "name": "All Transactions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "310d32b1-b4a2-481a-a8ee-26d892fb0329",
+          "name": "List All Transactions",
+          "request": {
+            "name": "List All Transactions",
+            "description": {
+              "content": "List all existing transactions to and from your trade partners.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "all-transactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "filter[type]",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter[flow]",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter[status]",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter[created_between]",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "Page cursor"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "100",
+                  "description": "Number of transactions returned per page."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5a2cacfe-b342-4406-bdd5-23f94e850b13",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "all-transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter[type]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[flow]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[status]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[created_between]",
+                      "value": "2024-01-01,2024-01-31"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"hasMore\": false,\n  \"perPage\": 100,\n  \"count\": 3,\n  \"nextCursor\": null,\n  \"nextPageUrl\": null,\n  \"items\": [\n    {\n      \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\",\n      \"type\": \"ORDER\",\n      \"flow\": \"LIVE\",\n      \"status\": \"SUCCESS\",\n      \"createdAt\": \"2024-01-01T00:00:00+00:00\",\n      \"replacesProcurosTransactionId\": null,\n      \"replacedByProcurosTransactionId\": null,\n      \"isLatestVersion\": true,\n      \"content\": {\n        \"header\": {\n          \"buyer\": {\n            \"name\": \"ACME Co. Ltd.\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016310\",\n                \"domain\": \"GS1\"\n              }\n            ],\n            \"postalAddress\": {\n              \"name\": \"ACME Co. Ltd.\",\n              \"street\": \"Elroy-Fritsch-Ring 15\",\n              \"city\": \"Berlin\",\n              \"countryCode\": \"DE\",\n              \"postalCode\": \"82643\"\n            },\n            \"contacts\": [\n              {\n                \"firstName\": \"John\",\n                \"lastName\": \"Doe\",\n                \"email\": \"jane.doe@example.com\",\n                \"fax\": \"(818) 463-6124\",\n                \"phone\": \"+1.352.856.0626\"\n              }\n            ]\n          },\n          \"supplier\": {\n            \"name\": \"Testsupplier\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016312\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"shipTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016313\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"billTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016314\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"orderIdentifier\": \"PO9383-R45\",\n          \"orderDate\": \"2021-09-30\",\n          \"currency\": \"EUR\",\n          \"requestedDeliveryDate\": \"2021-10-05\",\n          \"comments\": \"Something to comment\"\n        },\n        \"items\": [\n          {\n            \"lineNumber\": 1,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765432\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PROD-77-LS\",\n                \"domain\": \"BUYER\"\n              },\n              {\n                \"identifier\": \"sp_gr_8\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": false,\n            \"quantity\": 20,\n            \"unitOfMeasure\": \"EA\",\n            \"description\": \"First product description.\",\n            \"unitPrice\": 0.15\n          },\n          {\n            \"lineNumber\": 2,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765433\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PROD-78-LS\",\n                \"domain\": \"BUYER\"\n              },\n              {\n                \"identifier\": \"sp_gr_9\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": false,\n            \"quantity\": 19,\n            \"unitOfMeasure\": \"EA\",\n            \"description\": \"Sparkling Water - Crate (6x0.75l).\",\n            \"unitPrice\": 1.5\n          },\n          {\n            \"lineNumber\": 3,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765434\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PFAND-00B-LS\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": true,\n            \"quantity\": 19,\n            \"unitOfMeasure\": \"EA\",\n            \"description\": \"Deposit 1x crate + 6x bottles.\",\n            \"unitPrice\": 3.3\n          }\n        ]\n      }\n    },\n    {\n      \"procurosTransactionId\": \"94fe13aa-8c9b-40e5-9937-42b852185858\",\n      \"type\": \"SHIPPING_NOTICE\",\n      \"flow\": \"LIVE\",\n      \"status\": \"SUCCESS\",\n      \"createdAt\": \"2024-01-01T00:00:00+00:00\",\n      \"replacesProcurosTransactionId\": null,\n      \"replacedByProcurosTransactionId\": null,\n      \"isLatestVersion\": true,\n      \"content\": {\n        \"header\": {\n          \"buyer\": {\n            \"name\": \"ACME Co. Ltd.\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016310\",\n                \"domain\": \"GS1\"\n              }\n            ],\n            \"postalAddress\": {\n              \"city\": \"Berlin\",\n              \"countryCode\": \"DE\",\n              \"name\": \"ACME Co. Ltd.\",\n              \"postalCode\": \"82643\",\n              \"street\": \"Elroy-Fritsch-Ring 15\"\n            },\n            \"contacts\": [\n              {\n                \"firstName\": \"Jane\",\n                \"lastName\": \"Doe\",\n                \"email\": \"jane.doe@example.com\",\n                \"fax\": \"(818) 463-6124\",\n                \"phone\": \"+1.352.856.0626\"\n              }\n            ]\n          },\n          \"supplier\": {\n            \"name\": \"Testsupplier\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016312\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"shipTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016313\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"billTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016314\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"shippingNoticeIdentifier\": \"SN9383-R45\",\n          \"shippingNoticeDate\": \"2021-11-24\",\n          \"orderIdentifier\": \"PO9383-R45\",\n          \"orderDate\": \"2021-11-20\",\n          \"despatchDate\": \"2021-11-05\",\n          \"requestedDeliveryDate\": \"2021-11-06\",\n          \"expectedDeliveryDate\": \"2021-11-06\",\n          \"carrier\": \"Example Delivery Solution\",\n          \"trackingNumber\": \"b52ea6a7-c2ea-3bfc-a63f-19140d3b3af5\",\n          \"trackingUrl\": \"https://api.procuros.com/example\",\n          \"comments\": \"Something to comment\"\n        },\n        \"transportUnits\": [\n          {\n            \"items\": [\n              {\n                \"lineNumber\": 1,\n                \"orderLineNumber\": 1,\n                \"identifiers\": [\n                  {\n                    \"identifier\": \"4300348765432\",\n                    \"domain\": \"GS1\"\n                  },\n                  {\n                    \"identifier\": \"PROD-77-LS\",\n                    \"domain\": \"BUYER\"\n                  },\n                  {\n                    \"identifier\": \"sp_gr_8\",\n                    \"domain\": \"SUPPLIER\"\n                  }\n                ],\n                \"isDepositItem\": false,\n                \"orderedQuantity\": 20,\n                \"shippedQuantity\": 20,\n                \"unitPrice\": 200,\n                \"description\": \"First product description.\"\n              },\n              {\n                \"lineNumber\": 2,\n                \"orderLineNumber\": 2,\n                \"identifiers\": [\n                  {\n                    \"identifier\": \"4300348765433\",\n                    \"domain\": \"GS1\"\n                  },\n                  {\n                    \"identifier\": \"PROD-78-LS\",\n                    \"domain\": \"BUYER\"\n                  },\n                  {\n                    \"identifier\": \"sp_gr_9\",\n                    \"domain\": \"SUPPLIER\"\n                  }\n                ],\n                \"isDepositItem\": false,\n                \"orderedQuantity\": 19,\n                \"shippedQuantity\": 15,\n                \"openQuantityAction\": \"DISCARDED\",\n                \"unitPrice\": 1.5,\n                \"description\": \"Second product description.\"\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"procurosTransactionId\": \"94fe1224-ae01-4587-8155-8e852cbbe75d\",\n      \"type\": \"INVOICE\",\n      \"flow\": \"LIVE\",\n      \"status\": \"SUCCESS\",\n      \"createdAt\": \"2024-01-01T00:00:00+00:00\",\n      \"replacesProcurosTransactionId\": null,\n      \"replacedByProcurosTransactionId\": null,\n      \"isLatestVersion\": true,\n      \"content\": {\n        \"header\": {\n          \"buyer\": {\n            \"name\": \"ACME Co. Ltd.\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"4522704465331\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"DE123456789\",\n                \"domain\": \"VAT_DE\"\n              }\n            ],\n            \"postalAddress\": {\n              \"city\": \"Berlin\",\n              \"countryCode\": \"DE\",\n              \"name\": \"ACME Co. Ltd.\",\n              \"postalCode\": \"82643\",\n              \"street\": \"Elroy-Fritsch-Ring 15\"\n            },\n            \"contacts\": [\n              {\n                \"firstName\": \"Jane\",\n                \"lastName\": \"Doe\",\n                \"email\": \"jane.doe@example.com\",\n                \"fax\": \"(818) 463-6124\",\n                \"phone\": \"+1.352.856.0626\"\n              }\n            ]\n          },\n          \"supplier\": {\n            \"name\": \"Testsupplier\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"4231930775745\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"DE234567890\",\n                \"domain\": \"VAT_DE\"\n              }\n            ]\n          },\n          \"shipTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016313\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"billTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016314\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"invoiceIdentifier\": \"IV9383-R45\",\n          \"invoiceDate\": \"2021-11-11\",\n          \"shippingNoticeIdentifier\": \"SN9383-R45\",\n          \"shippingNoticeDate\": \"2021-11-04\",\n          \"orderIdentifier\": \"PO9383-R45\",\n          \"orderDate\": \"2021-11-10\",\n          \"paymentTerms\": [\n            {\n              \"payInNumberOfDays\": 28,\n              \"percentage\": 3\n            }\n          ],\n          \"comments\": \"Something to comment\"\n        },\n        \"items\": [\n          {\n            \"lineNumber\": 1,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765432\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PROD-77-LS\",\n                \"domain\": \"BUYER\"\n              },\n              {\n                \"identifier\": \"sp_gr_8\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": false,\n            \"quantity\": 20,\n            \"unitPrice\": 200,\n            \"description\": \"First product description.\",\n            \"tax\": {\n              \"amount\": 760,\n              \"percentage\": 19,\n              \"description\": \"Total tax amount.\"\n            }\n          },\n          {\n            \"lineNumber\": 2,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765433\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PROD-78-LS\",\n                \"domain\": \"BUYER\"\n              },\n              {\n                \"identifier\": \"sp_gr_9\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": false,\n            \"quantity\": 15,\n            \"unitPrice\": 1.5,\n            \"description\": \"Second product description.\",\n            \"tax\": {\n              \"amount\": 26.775,\n              \"percentage\": 19,\n              \"description\": \"Total tax amount.\"\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3014085f-1174-4433-ac3d-2c4f234e712a",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "all-transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter[type]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[flow]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[status]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[created_between]",
+                      "value": "2024-01-01,2024-01-31"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "04d9225d-ed61-45b3-9016-a1e3cbf611a1",
+              "name": "Client Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "all-transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter[type]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[flow]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[status]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[created_between]",
+                      "value": "2024-01-01,2024-01-31"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0b583586-6755-4255-8b6b-addd9476ab18",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "all-transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter[type]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[flow]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[status]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[created_between]",
+                      "value": "2024-01-01,2024-01-31"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "737c7490-8e37-4734-82a9-15fe3c12c368",
+          "name": "Show Transaction",
+          "request": {
+            "name": "Show Transaction",
+            "description": {
+              "content": "Show a single transaction.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "all-transactions",
+                ":procurosTransactionId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "procurosTransactionId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e2f868ac-696d-4ba8-b9d6-fe1e6e7c29b4",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "all-transactions",
+                    ":procurosTransactionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "procurosTransactionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\",\n    \"type\": \"ORDER\",\n    \"flow\": \"LIVE\",\n    \"status\": \"SUCCESS\",\n    \"createdAt\": \"2024-01-01T00:00:00+00:00\",\n    \"replacesProcurosTransactionId\": null,\n    \"replacedByProcurosTransactionId\": null,\n    \"isLatestVersion\": true,\n    \"content\": {\n      \"header\": {\n        \"buyer\": {\n          \"name\": \"ACME Co. Ltd.\",\n          \"identifiers\": [\n            {\n              \"identifier\": \"1100001016310\",\n              \"domain\": \"GS1\"\n            }\n          ],\n          \"postalAddress\": {\n            \"name\": \"ACME Co. Ltd.\",\n            \"street\": \"Elroy-Fritsch-Ring 15\",\n            \"city\": \"Berlin\",\n            \"countryCode\": \"DE\",\n            \"postalCode\": \"82643\"\n          },\n          \"contacts\": [\n            {\n              \"firstName\": \"John\",\n              \"lastName\": \"Doe\",\n              \"email\": \"jane.doe@example.com\",\n              \"fax\": \"(818) 463-6124\",\n              \"phone\": \"+1.352.856.0626\"\n            }\n          ]\n        },\n        \"supplier\": {\n          \"name\": \"Testsupplier\",\n          \"identifiers\": [\n            {\n              \"identifier\": \"1100001016312\",\n              \"domain\": \"GS1\"\n            }\n          ]\n        },\n        \"shipTo\": {\n          \"identifiers\": [\n            {\n              \"identifier\": \"1100001016313\",\n              \"domain\": \"GS1\"\n            }\n          ]\n        },\n        \"billTo\": {\n          \"identifiers\": [\n            {\n              \"identifier\": \"1100001016314\",\n              \"domain\": \"GS1\"\n            }\n          ]\n        },\n        \"orderIdentifier\": \"PO9383-R45\",\n        \"orderDate\": \"2021-09-30\",\n        \"currency\": \"EUR\",\n        \"requestedDeliveryDate\": \"2021-10-05\",\n        \"comments\": \"Something to comment\"\n      },\n      \"items\": [\n        {\n          \"lineNumber\": 1,\n          \"identifiers\": [\n            {\n              \"identifier\": \"4300348765432\",\n              \"domain\": \"GS1\"\n            },\n            {\n              \"identifier\": \"PROD-77-LS\",\n              \"domain\": \"BUYER\"\n            },\n            {\n              \"identifier\": \"sp_gr_8\",\n              \"domain\": \"SUPPLIER\"\n            }\n          ],\n          \"isDepositItem\": false,\n          \"quantity\": 20,\n          \"unitOfMeasure\": \"EA\",\n          \"description\": \"First product description.\",\n          \"unitPrice\": 0.15\n        },\n        {\n          \"lineNumber\": 2,\n          \"identifiers\": [\n            {\n              \"identifier\": \"4300348765433\",\n              \"domain\": \"GS1\"\n            },\n            {\n              \"identifier\": \"PROD-78-LS\",\n              \"domain\": \"BUYER\"\n            },\n            {\n              \"identifier\": \"sp_gr_9\",\n              \"domain\": \"SUPPLIER\"\n            }\n          ],\n          \"isDepositItem\": false,\n          \"quantity\": 19,\n          \"unitOfMeasure\": \"EA\",\n          \"description\": \"Sparkling Water - Crate (6x0.75l).\",\n          \"unitPrice\": 1.5\n        },\n        {\n          \"lineNumber\": 3,\n          \"identifiers\": [\n            {\n              \"identifier\": \"4300348765434\",\n              \"domain\": \"GS1\"\n            },\n            {\n              \"identifier\": \"PFAND-00B-LS\",\n              \"domain\": \"SUPPLIER\"\n            }\n          ],\n          \"isDepositItem\": true,\n          \"quantity\": 19,\n          \"unitOfMeasure\": \"EA\",\n          \"description\": \"Deposit 1x crate + 6x bottles.\",\n          \"unitPrice\": 3.3\n        }\n      ]\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4e9f8a47-6e05-412f-a9c5-668e958d5d3f",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "all-transactions",
+                    ":procurosTransactionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "procurosTransactionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f9cf975d-83e8-4540-a669-f24e24af732e",
+              "name": "Client Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "all-transactions",
+                    ":procurosTransactionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "procurosTransactionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b7dc847d-f818-4a48-adab-72b62d92ef32",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "all-transactions",
+                    ":procurosTransactionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "procurosTransactionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.procuros.io/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "31fd1ff7-9d17-4aa0-8744-ac6559abe5fe",
+    "name": "Procuros All Transactions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Manage Procuros Transactions.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,607 @@
+{
+  "item": [
+    {
+      "id": "81e59a50-a261-4172-8ea8-6b6a4440ac9d",
+      "name": "Outgoing Transactions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "61607019-f9ca-413e-b3c9-808d224eb52b",
+          "name": "Send Transaction",
+          "request": {
+            "name": "Send Transaction",
+            "description": {
+              "content": "Create and send a new transaction to one of your trade partners.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "transactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"<string>\",\n  \"content\": {\n    \"header\": {\n      \"buyer\": {\n        \"identifiers\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"name\": \"<string>\",\n        \"postalAddress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"contacts\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"financialInstitution\": {\n          \"name\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"institutionId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"institutionIdDomain\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"accountNumber\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"accountHolder\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      },\n      \"supplier\": {\n        \"identifiers\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"name\": \"<string>\",\n        \"postalAddress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"contacts\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"financialInstitution\": {\n          \"name\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"institutionId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"institutionIdDomain\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"accountNumber\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"accountHolder\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      },\n      \"orderIdentifier\": \"<string>\",\n      \"orderDate\": \"<dateTime>\",\n      \"shipTo\": {\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"identifiers\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"postalAddress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"contacts\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"financialInstitution\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"billTo\": {\n        \"identifiers\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"postalAddress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"contacts\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"financialInstitution\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"finalRecipient\": {\n        \"identifiers\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"postalAddress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"contacts\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"financialInstitution\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"technicalRecipient\": {\n        \"identifiers\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"postalAddress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"contacts\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"financialInstitution\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"technicalSender\": {\n        \"identifiers\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"postalAddress\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"contacts\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"financialInstitution\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"AdditionalOrderIdentifiers\": {\n        \"supplierOrderIdentifier\": \"<string>\",\n        \"shipToOrderIdentifier\": \"<string>\",\n        \"shipFromOrderIdentifier\": \"<string>\",\n        \"billToOrderIdentifier\": \"<string>\",\n        \"billFromOrderIdentifier\": \"<string>\",\n        \"finalRecipientOrderIdentifier\": \"<string>\",\n        \"technicalRecipientOrderIdentifier\": \"<string>\"\n      },\n      \"type\": \"<string>\",\n      \"requestedDeliveryDate\": \"<dateTime>\",\n      \"requestedEarliestDeliveryDate\": \"<dateTime>\",\n      \"requestedLatestDeliveryDate\": \"<dateTime>\",\n      \"currency\": \"<string>\",\n      \"paymentTerms\": [\n        {\n          \"payInNumberOfDays\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"percentage\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"payInNumberOfDays\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"percentage\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"comments\": \"<string>\",\n      \"deliveryInformation\": \"<string>\",\n      \"purchasingInformation\": \"<string>\",\n      \"legalInformation\": \"<string>\",\n      \"promotionCode\": \"<string>\",\n      \"contractReference\": \"<string>\",\n      \"version\": \"<integer>\",\n      \"attachments\": [\n        {\n          \"fileName\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"url\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"mimeType\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"fileName\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"url\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"mimeType\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ]\n    },\n    \"items\": [\n      {\n        \"lineNumber\": \"<integer>\",\n        \"identifiers\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"isDepositItem\": \"<boolean>\",\n        \"quantity\": \"<float>\",\n        \"unitOfMeasure\": \"EA\",\n        \"description\": \"<string>\",\n        \"comments\": \"<string>\",\n        \"unitPrice\": \"<float>\",\n        \"pricingUnitOfMeasure\": \"<string>\",\n        \"pricingUnitQuantity\": \"<float>\",\n        \"recommendedRetailPrice\": \"<float>\",\n        \"tax\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"percentage\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"description\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"promotionCode\": \"<string>\",\n        \"contractReference\": \"<string>\",\n        \"requestedDeliveryDate\": {\n          \"description\": \"Requested delivery date for this item. Use ISO 8601 date format: YYYY-MM-DD (e.g. 2023-12-06).\",\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"requestedEarliestDeliveryDate\": \"<dateTime>\",\n        \"requestedLatestDeliveryDate\": \"<dateTime>\",\n        \"deliveryGracePeriodInDays\": \"<integer>\",\n        \"minimumRemainingShelfLifeInDays\": \"<integer>\",\n        \"netWeight\": \"<float>\",\n        \"grossWeight\": \"<float>\",\n        \"originCountryCode\": \"<string>\",\n        \"colorCode\": \"<string>\",\n        \"colorName\": \"<string>\",\n        \"size\": \"<string>\",\n        \"dimension\": \"<string>\",\n        \"hsCode\": \"<string>\",\n        \"cnCode\": \"<string>\",\n        \"organicControlPointNumber\": \"<string>\",\n        \"fscNumber\": \"<string>\",\n        \"mscNumber\": \"<string>\",\n        \"season\": \"<string>\",\n        \"gender\": \"<string>\",\n        \"brand\": \"<string>\",\n        \"consumerGroup\": \"<string>\",\n        \"assortment\": \"<string>\",\n        \"category\": \"<string>\",\n        \"subCategory\": \"<string>\",\n        \"certificationsRequired\": {\n          \"fairtrade\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"supplierQa\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"eudr\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"attachments\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"modificationGroups\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ]\n      }\n    ],\n    \"summary\": {\n      \"subtotalAmount\": \"<float>\",\n      \"grossAmount\": \"<float>\",\n      \"netAmount\": \"<float>\",\n      \"dueAmount\": \"<float>\",\n      \"totalCharges\": \"<float>\",\n      \"totalAllowances\": \"<float>\",\n      \"tax\": {\n        \"total\": \"<float>\",\n        \"items\": [\n          {\n            \"percentage\": \"<float>\",\n            \"taxableAmount\": \"<float>\",\n            \"taxAmount\": \"<float>\",\n            \"category\": \"<string>\",\n            \"description\": \"<string>\"\n          },\n          {\n            \"percentage\": \"<float>\",\n            \"taxableAmount\": \"<float>\",\n            \"taxAmount\": \"<float>\",\n            \"category\": \"<string>\",\n            \"description\": \"<string>\"\n          }\n        ],\n        \"description\": \"<string>\"\n      },\n      \"modificationGroups\": [\n        {\n          \"basis\": \"<float>\",\n          \"level\": \"<integer>\",\n          \"modifications\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        {\n          \"basis\": \"<float>\",\n          \"level\": \"<integer>\",\n          \"modifications\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      ]\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0be35970-b617-42db-9d27-fc22182ae2c1",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"ORDER\",\n  \"content\": {\n    \"header\": {\n      \"buyer\": {\n        \"name\": \"ACME Co. Ltd.\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016310\",\n            \"domain\": \"GS1\"\n          }\n        ],\n        \"postalAddress\": {\n          \"city\": \"Berlin\",\n          \"countryCode\": \"DE\",\n          \"name\": \"ACME Co. Ltd.\",\n          \"postalCode\": \"82643\",\n          \"street\": \"Elroy-Fritsch-Ring 15\"\n        },\n        \"contacts\": [\n          {\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\",\n            \"email\": \"jane.doe@example.com\",\n            \"fax\": \"(818) 463-6124\",\n            \"phone\": \"+1.352.856.0626\"\n          }\n        ]\n      },\n      \"supplier\": {\n        \"name\": \"Testsupplier\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016312\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"shipTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016313\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"billTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016314\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"orderIdentifier\": \"PO9383-R45\",\n      \"orderDate\": \"2021-09-30\",\n      \"AdditionalOrderIdentifiers\": {\n        \"supplierOrderIdentifier\": \"SUP-12345\",\n        \"shipToOrderIdentifier\": \"ST-67890\",\n        \"billToOrderIdentifier\": \"BT-22222\",\n        \"finalRecipientOrderIdentifier\": \"FR-44444\",\n        \"technicalRecipientOrderIdentifier\": \"TR-55555\"\n      },\n      \"currency\": \"EUR\",\n      \"requestedDeliveryDate\": \"2021-10-05\",\n      \"paymentTerms\": [\n        {\n          \"payInNumberOfDays\": 28,\n          \"percentage\": 3\n        }\n      ]\n    },\n    \"items\": [\n      {\n        \"lineNumber\": 1,\n        \"identifiers\": [\n          {\n            \"identifier\": \"4300348765432\",\n            \"domain\": \"GS1\"\n          },\n          {\n            \"identifier\": \"PROD-77-LS\",\n            \"domain\": \"BUYER\"\n          },\n          {\n            \"identifier\": \"sp_gr_8\",\n            \"domain\": \"SUPPLIER\"\n          }\n        ],\n        \"isDepositItem\": false,\n        \"quantity\": 10,\n        \"unitOfMeasure\": \"EA\",\n        \"description\": \"First product description.\",\n        \"unitPrice\": 1.23,\n        \"tax\": {\n          \"percentage\": 7,\n          \"description\": \"Umsatzsteuer\"\n        },\n        \"brand\": \"kela\",\n        \"assortment\": \"ME_GEN\",\n        \"consumerGroup\": \"Unisex\",\n        \"category\": \"1008\",\n        \"subCategory\": \"Beverages\",\n        \"modificationGroups\": [\n          {\n            \"modifications\": [\n              {\n                \"type\": \"ALLOWANCE\",\n                \"reasonCode\": \"DISCOUNT\",\n                \"description\": \"Contract trade discount\",\n                \"percentage\": 7\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0d85eb75-6615-488c-8f9c-2eed944dd3a9",
+              "name": "Accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"ORDER\",\n  \"content\": {\n    \"header\": {\n      \"buyer\": {\n        \"name\": \"ACME Co. Ltd.\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016310\",\n            \"domain\": \"GS1\"\n          }\n        ],\n        \"postalAddress\": {\n          \"city\": \"Berlin\",\n          \"countryCode\": \"DE\",\n          \"name\": \"ACME Co. Ltd.\",\n          \"postalCode\": \"82643\",\n          \"street\": \"Elroy-Fritsch-Ring 15\"\n        },\n        \"contacts\": [\n          {\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\",\n            \"email\": \"jane.doe@example.com\",\n            \"fax\": \"(818) 463-6124\",\n            \"phone\": \"+1.352.856.0626\"\n          }\n        ]\n      },\n      \"supplier\": {\n        \"name\": \"Testsupplier\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016312\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"shipTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016313\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"billTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016314\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"orderIdentifier\": \"PO9383-R45\",\n      \"orderDate\": \"2021-09-30\",\n      \"AdditionalOrderIdentifiers\": {\n        \"supplierOrderIdentifier\": \"SUP-12345\",\n        \"shipToOrderIdentifier\": \"ST-67890\",\n        \"billToOrderIdentifier\": \"BT-22222\",\n        \"finalRecipientOrderIdentifier\": \"FR-44444\",\n        \"technicalRecipientOrderIdentifier\": \"TR-55555\"\n      },\n      \"currency\": \"EUR\",\n      \"requestedDeliveryDate\": \"2021-10-05\",\n      \"paymentTerms\": [\n        {\n          \"payInNumberOfDays\": 28,\n          \"percentage\": 3\n        }\n      ]\n    },\n    \"items\": [\n      {\n        \"lineNumber\": 1,\n        \"identifiers\": [\n          {\n            \"identifier\": \"4300348765432\",\n            \"domain\": \"GS1\"\n          },\n          {\n            \"identifier\": \"PROD-77-LS\",\n            \"domain\": \"BUYER\"\n          },\n          {\n            \"identifier\": \"sp_gr_8\",\n            \"domain\": \"SUPPLIER\"\n          }\n        ],\n        \"isDepositItem\": false,\n        \"quantity\": 10,\n        \"unitOfMeasure\": \"EA\",\n        \"description\": \"First product description.\",\n        \"unitPrice\": 1.23,\n        \"tax\": {\n          \"percentage\": 7,\n          \"description\": \"Umsatzsteuer\"\n        },\n        \"brand\": \"kela\",\n        \"assortment\": \"ME_GEN\",\n        \"consumerGroup\": \"Unisex\",\n        \"category\": \"1008\",\n        \"subCategory\": \"Beverages\",\n        \"modificationGroups\": [\n          {\n            \"modifications\": [\n              {\n                \"type\": \"ALLOWANCE\",\n                \"reasonCode\": \"DISCOUNT\",\n                \"description\": \"Contract trade discount\",\n                \"percentage\": 7\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"Trade relationship not yet active.\",\n  \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "cca155a7-5ea8-40b0-8f5e-236fc26d7ab7",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"ORDER\",\n  \"content\": {\n    \"header\": {\n      \"buyer\": {\n        \"name\": \"ACME Co. Ltd.\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016310\",\n            \"domain\": \"GS1\"\n          }\n        ],\n        \"postalAddress\": {\n          \"city\": \"Berlin\",\n          \"countryCode\": \"DE\",\n          \"name\": \"ACME Co. Ltd.\",\n          \"postalCode\": \"82643\",\n          \"street\": \"Elroy-Fritsch-Ring 15\"\n        },\n        \"contacts\": [\n          {\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\",\n            \"email\": \"jane.doe@example.com\",\n            \"fax\": \"(818) 463-6124\",\n            \"phone\": \"+1.352.856.0626\"\n          }\n        ]\n      },\n      \"supplier\": {\n        \"name\": \"Testsupplier\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016312\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"shipTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016313\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"billTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016314\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"orderIdentifier\": \"PO9383-R45\",\n      \"orderDate\": \"2021-09-30\",\n      \"AdditionalOrderIdentifiers\": {\n        \"supplierOrderIdentifier\": \"SUP-12345\",\n        \"shipToOrderIdentifier\": \"ST-67890\",\n        \"billToOrderIdentifier\": \"BT-22222\",\n        \"finalRecipientOrderIdentifier\": \"FR-44444\",\n        \"technicalRecipientOrderIdentifier\": \"TR-55555\"\n      },\n      \"currency\": \"EUR\",\n      \"requestedDeliveryDate\": \"2021-10-05\",\n      \"paymentTerms\": [\n        {\n          \"payInNumberOfDays\": 28,\n          \"percentage\": 3\n        }\n      ]\n    },\n    \"items\": [\n      {\n        \"lineNumber\": 1,\n        \"identifiers\": [\n          {\n            \"identifier\": \"4300348765432\",\n            \"domain\": \"GS1\"\n          },\n          {\n            \"identifier\": \"PROD-77-LS\",\n            \"domain\": \"BUYER\"\n          },\n          {\n            \"identifier\": \"sp_gr_8\",\n            \"domain\": \"SUPPLIER\"\n          }\n        ],\n        \"isDepositItem\": false,\n        \"quantity\": 10,\n        \"unitOfMeasure\": \"EA\",\n        \"description\": \"First product description.\",\n        \"unitPrice\": 1.23,\n        \"tax\": {\n          \"percentage\": 7,\n          \"description\": \"Umsatzsteuer\"\n        },\n        \"brand\": \"kela\",\n        \"assortment\": \"ME_GEN\",\n        \"consumerGroup\": \"Unisex\",\n        \"category\": \"1008\",\n        \"subCategory\": \"Beverages\",\n        \"modificationGroups\": [\n          {\n            \"modifications\": [\n              {\n                \"type\": \"ALLOWANCE\",\n                \"reasonCode\": \"DISCOUNT\",\n                \"description\": \"Contract trade discount\",\n                \"percentage\": 7\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"The given data was invalid.\",\n  \"errors\": {\n    \"type\": [\n      \"Transaction type \\\"PAYMENT_ADVICE\\\" is not valid\"\n    ]\n  },\n  \"errorUrl\": \"https://portal.procuros.io/.../errors/{procurosErrorId}\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5c34a979-958f-4cdb-a598-3eaf05b6fade",
+              "name": "Client Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"ORDER\",\n  \"content\": {\n    \"header\": {\n      \"buyer\": {\n        \"name\": \"ACME Co. Ltd.\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016310\",\n            \"domain\": \"GS1\"\n          }\n        ],\n        \"postalAddress\": {\n          \"city\": \"Berlin\",\n          \"countryCode\": \"DE\",\n          \"name\": \"ACME Co. Ltd.\",\n          \"postalCode\": \"82643\",\n          \"street\": \"Elroy-Fritsch-Ring 15\"\n        },\n        \"contacts\": [\n          {\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\",\n            \"email\": \"jane.doe@example.com\",\n            \"fax\": \"(818) 463-6124\",\n            \"phone\": \"+1.352.856.0626\"\n          }\n        ]\n      },\n      \"supplier\": {\n        \"name\": \"Testsupplier\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016312\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"shipTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016313\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"billTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016314\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"orderIdentifier\": \"PO9383-R45\",\n      \"orderDate\": \"2021-09-30\",\n      \"AdditionalOrderIdentifiers\": {\n        \"supplierOrderIdentifier\": \"SUP-12345\",\n        \"shipToOrderIdentifier\": \"ST-67890\",\n        \"billToOrderIdentifier\": \"BT-22222\",\n        \"finalRecipientOrderIdentifier\": \"FR-44444\",\n        \"technicalRecipientOrderIdentifier\": \"TR-55555\"\n      },\n      \"currency\": \"EUR\",\n      \"requestedDeliveryDate\": \"2021-10-05\",\n      \"paymentTerms\": [\n        {\n          \"payInNumberOfDays\": 28,\n          \"percentage\": 3\n        }\n      ]\n    },\n    \"items\": [\n      {\n        \"lineNumber\": 1,\n        \"identifiers\": [\n          {\n            \"identifier\": \"4300348765432\",\n            \"domain\": \"GS1\"\n          },\n          {\n            \"identifier\": \"PROD-77-LS\",\n            \"domain\": \"BUYER\"\n          },\n          {\n            \"identifier\": \"sp_gr_8\",\n            \"domain\": \"SUPPLIER\"\n          }\n        ],\n        \"isDepositItem\": false,\n        \"quantity\": 10,\n        \"unitOfMeasure\": \"EA\",\n        \"description\": \"First product description.\",\n        \"unitPrice\": 1.23,\n        \"tax\": {\n          \"percentage\": 7,\n          \"description\": \"Umsatzsteuer\"\n        },\n        \"brand\": \"kela\",\n        \"assortment\": \"ME_GEN\",\n        \"consumerGroup\": \"Unisex\",\n        \"category\": \"1008\",\n        \"subCategory\": \"Beverages\",\n        \"modificationGroups\": [\n          {\n            \"modifications\": [\n              {\n                \"type\": \"ALLOWANCE\",\n                \"reasonCode\": \"DISCOUNT\",\n                \"description\": \"Contract trade discount\",\n                \"percentage\": 7\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"errorUrl\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fc213521-e15f-419a-994b-635e8305e22e",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"ORDER\",\n  \"content\": {\n    \"header\": {\n      \"buyer\": {\n        \"name\": \"ACME Co. Ltd.\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016310\",\n            \"domain\": \"GS1\"\n          }\n        ],\n        \"postalAddress\": {\n          \"city\": \"Berlin\",\n          \"countryCode\": \"DE\",\n          \"name\": \"ACME Co. Ltd.\",\n          \"postalCode\": \"82643\",\n          \"street\": \"Elroy-Fritsch-Ring 15\"\n        },\n        \"contacts\": [\n          {\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\",\n            \"email\": \"jane.doe@example.com\",\n            \"fax\": \"(818) 463-6124\",\n            \"phone\": \"+1.352.856.0626\"\n          }\n        ]\n      },\n      \"supplier\": {\n        \"name\": \"Testsupplier\",\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016312\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"shipTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016313\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"billTo\": {\n        \"identifiers\": [\n          {\n            \"identifier\": \"1100001016314\",\n            \"domain\": \"GS1\"\n          }\n        ]\n      },\n      \"orderIdentifier\": \"PO9383-R45\",\n      \"orderDate\": \"2021-09-30\",\n      \"AdditionalOrderIdentifiers\": {\n        \"supplierOrderIdentifier\": \"SUP-12345\",\n        \"shipToOrderIdentifier\": \"ST-67890\",\n        \"billToOrderIdentifier\": \"BT-22222\",\n        \"finalRecipientOrderIdentifier\": \"FR-44444\",\n        \"technicalRecipientOrderIdentifier\": \"TR-55555\"\n      },\n      \"currency\": \"EUR\",\n      \"requestedDeliveryDate\": \"2021-10-05\",\n      \"paymentTerms\": [\n        {\n          \"payInNumberOfDays\": 28,\n          \"percentage\": 3\n        }\n      ]\n    },\n    \"items\": [\n      {\n        \"lineNumber\": 1,\n        \"identifiers\": [\n          {\n            \"identifier\": \"4300348765432\",\n            \"domain\": \"GS1\"\n          },\n          {\n            \"identifier\": \"PROD-77-LS\",\n            \"domain\": \"BUYER\"\n          },\n          {\n            \"identifier\": \"sp_gr_8\",\n            \"domain\": \"SUPPLIER\"\n          }\n        ],\n        \"isDepositItem\": false,\n        \"quantity\": 10,\n        \"unitOfMeasure\": \"EA\",\n        \"description\": \"First product description.\",\n        \"unitPrice\": 1.23,\n        \"tax\": {\n          \"percentage\": 7,\n          \"description\": \"Umsatzsteuer\"\n        },\n        \"brand\": \"kela\",\n        \"assortment\": \"ME_GEN\",\n        \"consumerGroup\": \"Unisex\",\n        \"category\": \"1008\",\n        \"subCategory\": \"Beverages\",\n        \"modificationGroups\": [\n          {\n            \"modifications\": [\n              {\n                \"type\": \"ALLOWANCE\",\n                \"reasonCode\": \"DISCOUNT\",\n                \"description\": \"Contract trade discount\",\n                \"percentage\": 7\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8471a591-b0f1-41bd-9b0e-2520e7de4822",
+          "name": "Report Outgoing Error",
+          "request": {
+            "name": "Report Outgoing Error",
+            "description": {
+              "content": "If you encounter an error while building an outgoing transaction payload, you can report it here. The error will enter the same exception handling process as an error reported while processing incoming transactions.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "errors"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"errorReason\": \"<string>\",\n  \"errorType\": \"<string>\",\n  \"errorContext\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"transactionIdentifier\": \"<string>\",\n  \"transactionType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f57b86e0-0496-4f98-acc9-2fe8e3f21704",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "errors"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"errorReason\": \"<string>\",\n  \"errorType\": \"<string>\",\n  \"errorContext\": {\n    \"key_0\": \"<string>\"\n  },\n  \"transactionIdentifier\": \"IV-0001\",\n  \"transactionType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"OK.\",\n  \"errorUrl\": \"https://portal.procuros.io/.../errors/{{procurosErrorId}}\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5905ba7c-0328-4961-a32d-2892a916ed69",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "errors"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"errorReason\": \"<string>\",\n  \"errorType\": \"<string>\",\n  \"errorContext\": {\n    \"key_0\": \"<string>\"\n  },\n  \"transactionIdentifier\": \"IV-0001\",\n  \"transactionType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0decf031-29fc-4758-be6c-bb5725f32b53",
+              "name": "Client Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "errors"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"errorReason\": \"<string>\",\n  \"errorType\": \"<string>\",\n  \"errorContext\": {\n    \"key_0\": \"<string>\"\n  },\n  \"transactionIdentifier\": \"IV-0001\",\n  \"transactionType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b0798ad0-411a-4fcb-9ddd-9638209e6e5f",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "errors"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"errorReason\": \"<string>\",\n  \"errorType\": \"<string>\",\n  \"errorContext\": {\n    \"key_0\": \"<string>\"\n  },\n  \"transactionIdentifier\": \"IV-0001\",\n  \"transactionType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.procuros.io/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5d5bd2e6-e9f6-4499-8bf1-1436e24ed865",
+    "name": "Procuros All Transactions Outgoing Transactions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Manage Procuros Transactions.",
+      "type": "text/plain"
+    }
+  }
+}

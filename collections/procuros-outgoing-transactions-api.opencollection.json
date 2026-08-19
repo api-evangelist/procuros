@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Procuros All Transactions Outgoing Transactions API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Outgoing Transactions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Send Transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.procuros.io/v2/transactions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create and send a new transaction to one of your trade partners."
+        },
+        {
+          "info": {
+            "name": "Report Outgoing Error",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.procuros.io/v2/errors",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "If you encounter an error while building an outgoing transaction payload, you can report it here. The error will enter the same exception handling process as an error reported while processing incoming transactions."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

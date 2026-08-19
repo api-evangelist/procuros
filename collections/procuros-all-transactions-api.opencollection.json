@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Procuros All Transactions API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "All Transactions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List All Transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.procuros.io/v2/all-transactions",
+            "params": [
+              {
+                "name": "filter[type]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter[flow]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter[status]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter[created_between]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "Page cursor"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "Number of transactions returned per page."
+              }
+            ]
+          },
+          "docs": "List all existing transactions to and from your trade partners."
+        },
+        {
+          "info": {
+            "name": "Show Transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.procuros.io/v2/all-transactions/:procurosTransactionId",
+            "params": [
+              {
+                "name": "procurosTransactionId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show a single transaction."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

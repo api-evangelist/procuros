@@ -1,0 +1,892 @@
+{
+  "item": [
+    {
+      "id": "af62cfd3-1ad7-4d35-9b59-5c731af19dff",
+      "name": "Incoming Transactions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "13ca75fb-76f6-4a6e-860a-4ca921770dc0",
+          "name": "List Incoming Transactions",
+          "request": {
+            "name": "List Incoming Transactions",
+            "description": {
+              "content": "List unprocessed incoming transactions from your trade partners.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "transactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "filter[type]",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "Page cursor"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "100",
+                  "description": "Number of transactions returned per page."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "03e732b7-8a2a-4a4f-9151-20882c166fba",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter[type]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"hasMore\": false,\n  \"perPage\": 100,\n  \"count\": 3,\n  \"nextCursor\": null,\n  \"nextPageUrl\": null,\n  \"items\": [\n    {\n      \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\",\n      \"type\": \"ORDER\",\n      \"content\": {\n        \"header\": {\n          \"buyer\": {\n            \"name\": \"ACME Co. Ltd.\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016310\",\n                \"domain\": \"GS1\"\n              }\n            ],\n            \"postalAddress\": {\n              \"name\": \"ACME Co. Ltd.\",\n              \"street\": \"Elroy-Fritsch-Ring 15\",\n              \"city\": \"Berlin\",\n              \"countryCode\": \"DE\",\n              \"postalCode\": \"82643\"\n            },\n            \"contacts\": [\n              {\n                \"firstName\": \"John\",\n                \"lastName\": \"Doe\",\n                \"email\": \"jane.doe@example.com\",\n                \"fax\": \"(818) 463-6124\",\n                \"phone\": \"+1.352.856.0626\"\n              }\n            ]\n          },\n          \"supplier\": {\n            \"name\": \"Testsupplier\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016312\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"shipTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016313\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"billTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016314\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"orderIdentifier\": \"PO9383-R45\",\n          \"orderDate\": \"2021-09-30\",\n          \"currency\": \"EUR\",\n          \"requestedDeliveryDate\": \"2021-10-05\",\n          \"comments\": \"Something to comment\"\n        },\n        \"items\": [\n          {\n            \"lineNumber\": 1,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765432\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PROD-77-LS\",\n                \"domain\": \"BUYER\"\n              },\n              {\n                \"identifier\": \"sp_gr_8\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": false,\n            \"quantity\": 20,\n            \"unitOfMeasure\": \"EA\",\n            \"description\": \"First product description.\",\n            \"unitPrice\": 0.15\n          },\n          {\n            \"lineNumber\": 2,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765433\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PROD-78-LS\",\n                \"domain\": \"BUYER\"\n              },\n              {\n                \"identifier\": \"sp_gr_9\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": false,\n            \"quantity\": 19,\n            \"unitOfMeasure\": \"EA\",\n            \"description\": \"Sparkling Water - Crate (6x0.75l).\",\n            \"unitPrice\": 1.5\n          },\n          {\n            \"lineNumber\": 3,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765434\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PFAND-00B-LS\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": true,\n            \"quantity\": 19,\n            \"unitOfMeasure\": \"EA\",\n            \"description\": \"Deposit 1x crate + 6x bottles.\",\n            \"unitPrice\": 3.3\n          }\n        ]\n      }\n    },\n    {\n      \"procurosTransactionId\": \"94fe13aa-8c9b-40e5-9937-42b852185858\",\n      \"type\": \"SHIPPING_NOTICE\",\n      \"content\": {\n        \"header\": {\n          \"buyer\": {\n            \"name\": \"ACME Co. Ltd.\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016310\",\n                \"domain\": \"GS1\"\n              }\n            ],\n            \"postalAddress\": {\n              \"city\": \"Berlin\",\n              \"countryCode\": \"DE\",\n              \"name\": \"ACME Co. Ltd.\",\n              \"postalCode\": \"82643\",\n              \"street\": \"Elroy-Fritsch-Ring 15\"\n            },\n            \"contacts\": [\n              {\n                \"firstName\": \"Jane\",\n                \"lastName\": \"Doe\",\n                \"email\": \"jane.doe@example.com\",\n                \"fax\": \"(818) 463-6124\",\n                \"phone\": \"+1.352.856.0626\"\n              }\n            ]\n          },\n          \"supplier\": {\n            \"name\": \"Testsupplier\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016312\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"shipTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016313\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"billTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016314\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"shippingNoticeIdentifier\": \"SN9383-R45\",\n          \"shippingNoticeDate\": \"2021-11-24\",\n          \"orderIdentifier\": \"PO9383-R45\",\n          \"orderDate\": \"2021-11-20\",\n          \"despatchDate\": \"2021-11-05\",\n          \"requestedDeliveryDate\": \"2021-11-06\",\n          \"expectedDeliveryDate\": \"2021-11-06\",\n          \"carrier\": \"Example Delivery Solution\",\n          \"trackingNumber\": \"b52ea6a7-c2ea-3bfc-a63f-19140d3b3af5\",\n          \"trackingUrl\": \"https://api.procuros.com/example\",\n          \"comments\": \"Something to comment\"\n        },\n        \"transportUnits\": [\n          {\n            \"items\": [\n              {\n                \"lineNumber\": 1,\n                \"orderLineNumber\": 1,\n                \"identifiers\": [\n                  {\n                    \"identifier\": \"4300348765432\",\n                    \"domain\": \"GS1\"\n                  },\n                  {\n                    \"identifier\": \"PROD-77-LS\",\n                    \"domain\": \"BUYER\"\n                  },\n                  {\n                    \"identifier\": \"sp_gr_8\",\n                    \"domain\": \"SUPPLIER\"\n                  }\n                ],\n                \"isDepositItem\": false,\n                \"orderedQuantity\": 20,\n                \"shippedQuantity\": 20,\n                \"unitPrice\": 200,\n                \"description\": \"First product description.\"\n              },\n              {\n                \"lineNumber\": 2,\n                \"orderLineNumber\": 2,\n                \"identifiers\": [\n                  {\n                    \"identifier\": \"4300348765433\",\n                    \"domain\": \"GS1\"\n                  },\n                  {\n                    \"identifier\": \"PROD-78-LS\",\n                    \"domain\": \"BUYER\"\n                  },\n                  {\n                    \"identifier\": \"sp_gr_9\",\n                    \"domain\": \"SUPPLIER\"\n                  }\n                ],\n                \"isDepositItem\": false,\n                \"orderedQuantity\": 19,\n                \"shippedQuantity\": 15,\n                \"openQuantityAction\": \"DISCARDED\",\n                \"unitPrice\": 1.5,\n                \"description\": \"Second product description.\"\n              }\n            ]\n          }\n        ]\n      }\n    },\n    {\n      \"procurosTransactionId\": \"94fe1224-ae01-4587-8155-8e852cbbe75d\",\n      \"type\": \"INVOICE\",\n      \"content\": {\n        \"header\": {\n          \"buyer\": {\n            \"name\": \"ACME Co. Ltd.\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"4522704465331\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"DE123456789\",\n                \"domain\": \"VAT_DE\"\n              }\n            ],\n            \"postalAddress\": {\n              \"city\": \"Berlin\",\n              \"countryCode\": \"DE\",\n              \"name\": \"ACME Co. Ltd.\",\n              \"postalCode\": \"82643\",\n              \"street\": \"Elroy-Fritsch-Ring 15\"\n            },\n            \"contacts\": [\n              {\n                \"firstName\": \"Jane\",\n                \"lastName\": \"Doe\",\n                \"email\": \"jane.doe@example.com\",\n                \"fax\": \"(818) 463-6124\",\n                \"phone\": \"+1.352.856.0626\"\n              }\n            ]\n          },\n          \"supplier\": {\n            \"name\": \"Testsupplier\",\n            \"identifiers\": [\n              {\n                \"identifier\": \"4231930775745\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"DE234567890\",\n                \"domain\": \"VAT_DE\"\n              }\n            ]\n          },\n          \"shipTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016313\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"billTo\": {\n            \"identifiers\": [\n              {\n                \"identifier\": \"1100001016314\",\n                \"domain\": \"GS1\"\n              }\n            ]\n          },\n          \"invoiceIdentifier\": \"IV9383-R45\",\n          \"invoiceDate\": \"2021-11-11\",\n          \"shippingNoticeIdentifier\": \"SN9383-R45\",\n          \"shippingNoticeDate\": \"2021-11-04\",\n          \"orderIdentifier\": \"PO9383-R45\",\n          \"orderDate\": \"2021-11-10\",\n          \"paymentTerms\": [\n            {\n              \"payInNumberOfDays\": 28,\n              \"percentage\": 3\n            }\n          ],\n          \"comments\": \"Something to comment\"\n        },\n        \"items\": [\n          {\n            \"lineNumber\": 1,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765432\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PROD-77-LS\",\n                \"domain\": \"BUYER\"\n              },\n              {\n                \"identifier\": \"sp_gr_8\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": false,\n            \"quantity\": 20,\n            \"unitPrice\": 200,\n            \"description\": \"First product description.\",\n            \"tax\": {\n              \"amount\": 760,\n              \"percentage\": 19,\n              \"description\": \"Total tax amount.\"\n            }\n          },\n          {\n            \"lineNumber\": 2,\n            \"identifiers\": [\n              {\n                \"identifier\": \"4300348765433\",\n                \"domain\": \"GS1\"\n              },\n              {\n                \"identifier\": \"PROD-78-LS\",\n                \"domain\": \"BUYER\"\n              },\n              {\n                \"identifier\": \"sp_gr_9\",\n                \"domain\": \"SUPPLIER\"\n              }\n            ],\n            \"isDepositItem\": false,\n            \"quantity\": 15,\n            \"unitPrice\": 1.5,\n            \"description\": \"Second product description.\",\n            \"tax\": {\n              \"amount\": 26.775,\n              \"percentage\": 19,\n              \"description\": \"Total tax amount.\"\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0503cd34-dd65-4163-840d-0ac75cf1a534",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter[type]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "be005de5-89ef-4ebc-a4b0-cd9190b1cc6f",
+              "name": "Client Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter[type]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f0a33b73-94f7-4aad-a6d9-25847c381522",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter[type]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3217aed8-c3f0-4ec9-8a91-01bf79c3c44c",
+          "name": "Mark Transaction Processed",
+          "request": {
+            "name": "Mark Transaction Processed",
+            "description": {
+              "content": "Report processing of incoming transactions.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "transactions",
+                ":procurosTransactionId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "procurosTransactionId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"success\": \"<boolean>\",\n  \"errorReason\": \"<string>\",\n  \"errorType\": \"<string>\",\n  \"errorContext\": {\n    \"key_0\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7c735485-f942-4bf2-b330-d19cc24e5dad",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions",
+                    ":procurosTransactionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "procurosTransactionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"success\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"message\": \"OK.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1aac9512-01bb-4b1d-ada8-d62160e66a17",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions",
+                    ":procurosTransactionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "procurosTransactionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"success\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ba690170-46a5-4369-9133-de95e1f2334d",
+              "name": "Client Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions",
+                    ":procurosTransactionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "procurosTransactionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"success\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "16a755d4-e46a-4e60-96f4-54cfbc0c6021",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions",
+                    ":procurosTransactionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "procurosTransactionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"success\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "58bae3fe-fd31-4ead-a1ff-8405acd613db",
+          "name": "Bulk Mark Transactions Processed",
+          "request": {
+            "name": "Bulk Mark Transactions Processed",
+            "description": {
+              "content": "Mark a list of incoming transactions as processed.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "transactions",
+                "bulk",
+                "mark-processed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    {\n      \"procurosTransactionId\": \"<uuid>\",\n      \"success\": \"<boolean>\",\n      \"errorReason\": \"<string>\",\n      \"errorType\": \"<string>\",\n      \"errorContext\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\"\n      }\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e9bedf41-8613-4ae8-8a2f-e526d968e93e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions",
+                    "bulk",
+                    "mark-processed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"procurosTransactionId\": \"949b2ef2-3f40-465e-a7ee-ea3f9f189860\",\n    \"success\": true\n  },\n  {\n    \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\",\n    \"success\": false,\n    \"errorReason\": \"Product GTIN '0001647296281' not found\",\n    \"errorType\": \"DATA\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"procurosTransactionId\": \"949b2ef2-3f40-465e-a7ee-ea3f9f189860\",\n      \"message\": \"OK.\"\n    },\n    {\n      \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\",\n      \"message\": \"OK.\",\n      \"errorUrl\": \"https://portal.procuros.io/transactions/{{procurosTransactionId}}/errors\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f711006f-7313-4d79-aa39-5eab106fad8c",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions",
+                    "bulk",
+                    "mark-processed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"procurosTransactionId\": \"949b2ef2-3f40-465e-a7ee-ea3f9f189860\",\n    \"success\": true\n  },\n  {\n    \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\",\n    \"success\": false,\n    \"errorReason\": \"Product GTIN '0001647296281' not found\",\n    \"errorType\": \"DATA\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"errors\": {\n    \"key_0\": [\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\"\n    ],\n    \"key_2\": [\n      \"string\"\n    ],\n    \"key_3\": [\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "edb56ba9-7bac-4a77-8029-65d085a50099",
+              "name": "Client Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions",
+                    "bulk",
+                    "mark-processed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"procurosTransactionId\": \"949b2ef2-3f40-465e-a7ee-ea3f9f189860\",\n    \"success\": true\n  },\n  {\n    \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\",\n    \"success\": false,\n    \"errorReason\": \"Product GTIN '0001647296281' not found\",\n    \"errorType\": \"DATA\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4eed0994-1a60-44ba-bdea-4cf2fedd519b",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "transactions",
+                    "bulk",
+                    "mark-processed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"procurosTransactionId\": \"949b2ef2-3f40-465e-a7ee-ea3f9f189860\",\n    \"success\": true\n  },\n  {\n    \"procurosTransactionId\": \"949b2f25-fd9d-4c58-8899-b4dc277f8cf9\",\n    \"success\": false,\n    \"errorReason\": \"Product GTIN '0001647296281' not found\",\n    \"errorType\": \"DATA\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.procuros.io/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3ec6d281-385c-4398-a22e-c634f3f09acf",
+    "name": "Procuros All Transactions Incoming Transactions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Manage Procuros Transactions.",
+      "type": "text/plain"
+    }
+  }
+}

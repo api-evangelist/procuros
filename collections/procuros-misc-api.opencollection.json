@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Procuros All Transactions Misc API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Misc",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Test connection to API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.procuros.io/v2/ping"
+          },
+          "docs": "Send an authorized request to the API to test the connectivity."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Procuros All Transactions Incoming Transactions API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Incoming Transactions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Incoming Transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.procuros.io/v2/transactions",
+            "params": [
+              {
+                "name": "filter[type]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "Page cursor"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "Number of transactions returned per page."
+              }
+            ]
+          },
+          "docs": "List unprocessed incoming transactions from your trade partners."
+        },
+        {
+          "info": {
+            "name": "Mark Transaction Processed",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.procuros.io/v2/transactions/:procurosTransactionId",
+            "params": [
+              {
+                "name": "procurosTransactionId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Report processing of incoming transactions."
+        },
+        {
+          "info": {
+            "name": "Bulk Mark Transactions Processed",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.procuros.io/v2/transactions/bulk/mark-processed",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Mark a list of incoming transactions as processed."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
