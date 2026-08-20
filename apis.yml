@@ -37,6 +37,16 @@ created: '2026-07-17'
 modified: '2026-07-20'
 tags:
 - Company
+- Software-as-a-Service
+- EDI
+- E-Invoicing
+- Supply Chain
+- Procurement
+- B2B Integration
+- Logistics
+- ERP Integration
+tags_raw:
+- Company
 - SaaS
 - EDI
 - E-Invoicing
@@ -83,7 +93,8 @@ apis:
   description: The Misc API from Procuros — 1 operation(s) for misc.
   humanURL: https://docs.procuros.io/en/api/v2/overview
   baseURL: https://api.procuros.io/v2
-  tags:
+  tags: []
+  tags_raw:
   - Misc
   properties:
   - type: OpenAPI
