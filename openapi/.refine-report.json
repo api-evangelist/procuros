@@ -1,10 +1,7 @@
 {
   "provider": "procuros",
   "sources": [
-    "procuros-all-transactions-api-openapi.yml",
-    "procuros-incoming-transactions-api-openapi.yml",
-    "procuros-misc-api-openapi.yml",
-    "procuros-outgoing-transactions-api-openapi.yml"
+    "_original/procuros-openapi-original.yml"
   ],
   "outputs": [
     "procuros-all-transactions-api-openapi.yml",
@@ -15,6 +12,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "procuros-openapi-original.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "procuros-openapi-original.yml: declared missing tag: All Transactions",
+    "procuros-openapi-original.yml: declared missing tag: Incoming Transactions",
+    "procuros-openapi-original.yml: declared missing tag: Misc",
+    "procuros-openapi-original.yml: declared missing tag: Outgoing Transactions",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "procuros-all-transactions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "procuros-incoming-transactions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "procuros-misc-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "procuros-outgoing-transactions-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
