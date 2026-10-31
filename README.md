@@ -64,6 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Procuros is a company surfaced as a portfolio company of creandum, point-nine and added to the API Evangelist network as a stub for enrichment. Sector: saas. This profile is a lead awaiting the enrichment pipeline.
+Procuros is a Hamburg-based B2B digital trade platform that connects suppliers with retailers and logistics partners through automated document exchange. A single connection lets trading partners exchange orders, order responses, invoices, credit notes, shipping notices, dispatch instructions, product catalogs and more — whether the partner runs EDI (AS2, SFTP, X.400), PDFs, or Excel. Procuros offers ERP connectors (SAP, Microsoft Business Central, Oracle, Odoo, Weclapp, Xentral, JTL), an AI-powered Order Agent for PDF/email orders, e-invoicing compliance (ZUGFeRD, X-Rechnung, PEPPOL), logistics automation and payment reconciliation. Its REST API v2 lets integrators list incoming transactions, send outgoing transactions, mark documents processed, and report errors — backed by an OpenAPI 3.0.3 spec, cursor pagination, Bearer-token auth, and a staging environment. Backed by Creandum and Point Nine.
 
-Backed by: creandum, point-nine — https://procuros.io/
+**Areas:** Company · Software-as-a-Service · EDI · E-Invoicing · Supply Chain · Procurement · B2B Integration · Logistics · ERP Integration
+
+## Procuros on APIs.io
+
+Everything profiled for Procuros is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/procuros/](https://apis.io/providers/procuros/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [Procuros All Transactions API](https://apis.io/apis/procuros/procuros-all-transactions-api/) — The All Transactions API from Procuros — 2 operation(s) for all transactions.
+- [Procuros Incoming Transactions API](https://apis.io/apis/procuros/procuros-incoming-transactions-api/) — The Incoming Transactions API from Procuros — 3 operation(s) for incoming transactions.
+- [Procuros Misc API](https://apis.io/apis/procuros/procuros-misc-api/) — The Misc API from Procuros — 1 operation(s) for misc.
+- [Procuros Outgoing Transactions API](https://apis.io/apis/procuros/procuros-outgoing-transactions-api/) — The Outgoing Transactions API from Procuros — 2 operation(s) for outgoing transactions.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [procuros](https://apis.io/servers/procuros/procuros/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Procuros Agentic Access](https://apis.io/agentic-access/procuros/procuros-agentic-access/)
+
+#### Collections (4)
+
+Postman and Open Collection request collections.
+
+- [Procuros All Transactions API](https://apis.io/collections/procuros/open-procuros-all-transactions-api/)
+- [Procuros All Transactions Incoming Transactions API](https://apis.io/collections/procuros/open-procuros-incoming-transactions-api/)
+- [Procuros All Transactions Misc API](https://apis.io/collections/procuros/open-procuros-misc-api/)
+- [Procuros All Transactions Outgoing Transactions API](https://apis.io/collections/procuros/open-procuros-outgoing-transactions-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Procuros V2 Overlay](https://apis.io/overlays/procuros/procuros-v2-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Procuros Authentication](https://apis.io/security/procuros/procuros-authentication/)
+- [Procuros Domain Security](https://apis.io/security/procuros/procuros-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://procuros.io/)
+- [Documentation](https://docs.procuros.io/)
+- [Getting started](https://docs.procuros.io/en/api/v2/quick-start)
+- [API reference](https://docs.procuros.io/en/api/v2/overview)
+- [Blog](https://procuros.io/blog)
+- [Terms of service](https://procuros.io/saas-terms-and-conditions)
+- [Privacy policy](https://procuros.io/data-processing)
+- [GitHub](https://github.com/procuros)
+
+## API Evangelist rating
+
+**Kin Score 41.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 51.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 61.3 |
+| Access clarity | 27.6 |
+
+**Agent readiness 32.8** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | paginated |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/procuros/](https://apis.io/providers/procuros/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Procuros: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/procuros/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
